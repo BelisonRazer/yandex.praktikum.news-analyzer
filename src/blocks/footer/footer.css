@@ -1,0 +1,16 @@
+.footer {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    max-width: 320px;
+
+    margin: 0 auto;
+    padding: 20px 0 22px 0;
+
+    background-color: #ffffff;
+
+    font-family: Roboto-regular, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+}

@@ -1,0 +1,10 @@
+.footer__nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 40px 0;
+}
+
+.footer__nav-list a:active, a:hover, a {
+    text-decoration:none;
+    color: #1A1B22
+}
