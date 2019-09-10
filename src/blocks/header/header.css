@@ -19,6 +19,6 @@
     flex-direction: column;
     justify-content: center;
 
-    background-image: url(/src/images/header-background.jpg);
+    background-image: url('../../images/header-background.jpg');
     background-size: cover;
 }
