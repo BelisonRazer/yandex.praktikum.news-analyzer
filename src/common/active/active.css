@@ -1,0 +1,7 @@
+ul > .active > a, ul > .active > a:active, ul > .active > a:hover, ul > .active > a:visited {
+    color: #ffffff;
+}
+
+ul > .active {
+    border-bottom: 3px solid #ffffff;
+}

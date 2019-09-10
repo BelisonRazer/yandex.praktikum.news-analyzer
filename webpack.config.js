@@ -5,6 +5,7 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackMd5Hash = require('webpack-md5-hash');
 const webpack = require('webpack');
+// const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 const basicPlugins = [
     new HtmlWebpackPlugin({

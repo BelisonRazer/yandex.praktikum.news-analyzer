@@ -1,16 +1,19 @@
+@import url(./__column/footer__column.css);
+@import url(./__column/_info/footer__column_info.css);
+@import url(./__column/_social/footer__column_social.css);
+@import url(./__copyright/footer__copyright.css);
+@import url(./__link/footer__link.css);
+@import url(./__nav-list-item/footer__nav-list-item.css);
+@import url(./__nav-list/footer__nav-list.css);
+@import url(./__social-item/footer__social-item.css);
+@import url(./__social-box/footer__social-box.css);
+
 .footer {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
 
-    max-width: 320px;
+    min-width: 320px;
 
-    margin: 0 auto;
     padding: 20px 0 22px 0;
-
-    background-color: #ffffff;
-
-    font-family: Roboto-regular, sans-serif;
-    font-style: normal;
-    font-weight: normal;
 }

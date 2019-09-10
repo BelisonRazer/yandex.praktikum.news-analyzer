@@ -1,0 +1,11 @@
+.header__label {
+    margin: 0;
+
+    font-family: Robotoslab-regular;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 40px;
+
+    color: #ffffff;
+}

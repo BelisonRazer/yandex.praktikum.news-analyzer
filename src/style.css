@@ -2,30 +2,25 @@
 
 @import url(./common/text/text.css);
 @import url(./common/title/title.css);
+@import url(./common/active/active.css);
+@import url(./common/button/button.css);
 
+@import url(./blocks/header/header.css);
 @import url(./blocks/author/author.css);
-@import url(./blocks/author/__image-box/author__image-box.css);
-@import url(./blocks/author/__content/author__content.css);
-
 @import url(./blocks/footer/footer.css);
-@import url(./blocks/footer/__column/footer__column.css);
-@import url(./blocks/footer/__column/_info/footer__column_info.css);
-@import url(./blocks/footer/__column/_social/footer__column_social.css);
-@import url(./blocks/footer/__copyright/footer__copyright.css);
-@import url(./blocks/footer/__link/footer__link.css);
-@import url(./blocks/footer/__nav-list-item/footer__nav-list-item.css);
-@import url(./blocks/footer/__nav-list/footer__nav-list.css);
-@import url(./blocks/footer/__social-item/footer__social-item.css);
-@import url(./blocks/footer/__social-box/footer__social-box.css);
+@import url(./blocks/root/root.css);
 
 body {
     margin: 0;
-
-    background-color: #333;
 }
 
 button, 
 button:active, 
 button:focus {
     outline: none;
+}
+
+a:active, a:hover, a {
+    text-decoration:none;
+    color: #1A1B22;
 }

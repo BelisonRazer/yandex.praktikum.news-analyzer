@@ -1,0 +1,24 @@
+@import url(./__heading/header__heading.css);
+@import url(./__title/header__title.css);
+@import url(./__navigation/header__navigation.css);
+@import url(./__nav-list/header__nav-list.css);
+@import url(./__nav-list-item/header__nav-list-item.css);
+@import url(./__link/header__link.css);
+@import url(./__main/header__main.css);
+@import url(./__label/header__label.css);
+@import url(./__text/header__text.css);
+@import url(./__search-field/header__search-field.css);
+@import url(./__input-container/header__input-container.css);
+@import url(./__input/header__input.css);
+@import url(./__button/header__button.css);
+@import url(./__label-container/header__label-container.css);
+/* @import url(); */
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background-image: url(/src/images/header-background.jpg);
+    background-size: cover;
+}
