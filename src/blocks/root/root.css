@@ -8,3 +8,9 @@
     font-style: normal;
     font-weight: normal;
 }
+
+@keyframes spin {
+	100% {
+		transform: rotate(360deg);
+	}
+}

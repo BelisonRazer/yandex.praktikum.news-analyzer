@@ -1,0 +1,7 @@
+.news-card__icon {
+    background-image: url(../../../images/not-found_v1.png);
+    width: 96px;
+    height: 96px;
+
+    margin-bottom: 24px;
+}

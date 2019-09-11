@@ -1,0 +1,9 @@
+.news-card__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 32px 0 44px 0;
+
+    width: 100%;
+}

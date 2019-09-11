@@ -1,0 +1,19 @@
+@import "./__content/news-card__content.css";
+@import "./__list/news-card__list.css";
+@import "./__not-found/news-card__not-found.css";
+@import "./__search/news-card__search.css";
+@import "./__icon/news-card__icon.css";
+@import "./__title/news-card__title.css";
+@import "./__message/news-card__message.css";
+@import "./__head/news-card__head.css";
+@import "./__head-title/news-card__head-title.css";
+@import "./__item-container/news-card__item-container.css";
+@import "./__item/news-card__item.css";
+@import "./__link-to-analytics/news-card__link-to-analytics.css";
+@import "./__button-show-more/news-card__button-show-more.css";
+@import "./__head-title-box/news-card__head-title-box.css";
+@import "./__form/news-card__form.css";
+
+.news-card {
+    background-color: #F5F6F7;
+}

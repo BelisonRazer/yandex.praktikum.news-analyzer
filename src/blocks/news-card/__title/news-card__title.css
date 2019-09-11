@@ -1,0 +1,9 @@
+.news-card__title {
+    margin: 0 0 16px 0;
+
+    font-family: Robotoslab-regular;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 30px;
+}

@@ -1,0 +1,12 @@
+.news-card__head-title {
+    margin: 0;
+
+    font-family: Robotoslab-regular;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 34px;
+    letter-spacing: 1px;
+
+    color: #1A1B22;
+}
