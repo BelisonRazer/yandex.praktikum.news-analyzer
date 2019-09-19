@@ -1,0 +1,26 @@
+.table__title-box > .title {
+    margin: 0;
+
+    font-size: 22px;
+    line-height: 30px;
+}
+
+.table__title-box {
+    margin: 0 16px 16px 16px;
+
+    width: 80%;
+}
+
+@media screen and (min-width: 768px) {
+
+    .table__title-box {
+        margin: 0 40px 50px 40px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+
+    .table__title-box {
+        margin: 0 104px 43px 104px;
+    }
+}

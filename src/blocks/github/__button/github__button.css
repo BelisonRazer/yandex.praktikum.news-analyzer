@@ -1,0 +1,33 @@
+.github__button {
+    max-width: 288px;
+
+    background: #F5F6F7;
+    color: #1A1B22; 
+
+    border: 1px solid #1A1B22;
+    border-radius: 80px;  
+}
+
+.github__button > a:hover {
+    color: #B6BCBF;
+}
+
+@media screen and (min-width: 768px) {
+    .github__button {
+        border: 0;
+
+        width: 180px;
+    }
+
+    .github__button {
+        height: auto;
+    }
+
+    .github__button::after {
+        content: url("../../../images/arrow-r.png");
+
+        position: relative;
+        top: 1px;
+        left: 7px;
+    }
+}

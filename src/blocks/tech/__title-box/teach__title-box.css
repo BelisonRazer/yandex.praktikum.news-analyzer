@@ -1,0 +1,25 @@
+.teach__title-box {
+    max-width: 65%;
+
+    margin: 0 16px 40px 16px;
+}
+
+.teach__title-box > .title {
+    margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+    .teach__title-box {
+        margin: 0 40px 40px 40px;
+
+        max-width: 27%;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .teach__title-box {
+        margin: 0 176px 0 104px;
+
+        max-width: 344px;
+    }
+}

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
@@ -14,20 +14,20 @@
     <div class="root">
 
         <header class="header root__section">
-            <div class="header__heading">
-                <h2 class="header__title">NewsAnalyzer</h2>
-                <nav class="header__navigation">
-                    <ul class="header__nav-list">
-                        <li class="header__nav-list-item active"><a class="header__link" href="#">Главная</a></li>
-                        <li class="header__nav-list-item"><a class="header__link" href="#">О проекте</a></li>
+            <div class="heading">
+                <h2 class="heading__title heading__title_color_white">NewsAnalyzer</h2>
+                <nav class="heading__nav">
+                    <ul class="heading__list">
+                        <li class="heading__item active active_color_white"><a class="heading__link" href="./index.html">Главная</a></li>
+                        <li class="heading__item"><a class="heading__link" href="./about.html">О проекте</a></li>
                     </ul>
                 </nav>
             </div>
             <div class="header__main">
                 <div class="header__label-container">
-                    <h1 class="header__label">Что в мире творится?</h1>
+                    <h1 class="header__label">Что в&nbsp;мире творится?</h1>
                 </div>
-                <p class="header__text">Введите в поиске любую тему и узнайте, насколько популярной она была в носотях за прошедшую неделю.</p>
+                <p class="header__text">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.</p>
                 <form class="header__search-field" name="searchForm">
                     <div class="header__input-container">
                         <input id="word" type="text" name="name" class="header__input err" placeholder="Политика">
@@ -42,10 +42,11 @@
             <div class="news-card__content">
                 <div class="news-card__search">
                     <i class="circle-preloader"></i>
+                    <p class="circle-preloader__text">Идет поиск новостей...</p>
                 </div>
                 <div class="news-card__not-found">
                     <div class="news-card__icon"></div>
-                    <h2 class="news-card__title">Ничего не найдено</h2>
+                    <h2 class="news-card__title">Ничего не &nbsp;найдено</h2>
                     <p class="news-card__message">К сожалению по вашему запросу ничего не найдено.</p>
                 </div>
                 <div class="news-card__list!">
@@ -61,12 +62,75 @@
                     <div class="news-card__head-title-box">
                         <h2 class="news-card__head-title">Результаты поиска</h2>
                     </div>
-                    <a href="#" class="news-card__link-to-analytics">Посмотреть аналитику &rang;</a>
+                    <a href="./analitics.html" class="news-card__link-to-analytics">Посмотреть аналитику</a>
                 </div>
                 <div class="news-card__item-container">
                     <div class="news-card__item">
-
+                        <div class="news-card__image"></div>
+                        <p class="news-card__date">2 августа, 2019</p>
+                        <h3 class="news-card__label">Национальное достояние – парки</h3>
+                        <div class="news-card__correct">
+                            <div>
+                                <p class="news-card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков</p>
+                            </div>
+                        </div>
+                        <p class="news-card__source">Лента.ру</p>
                     </div>
+                    <div class="news-card__item">
+                        <div class="news-card__image"></div>
+                        <p class="news-card__date">2 августа, 2019</p>
+                        <h3 class="news-card__label">Национальное достояние – парки</h3>
+                        <div class="news-card__correct">
+                            <div>
+                                <p class="news-card__text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного из местных чудес природы.</p>
+                            </div>
+                        </div>
+                        <p class="news-card__source">Лента.ру</p>
+                    </div>
+                    <div class="news-card__item">
+                        <div class="news-card__image"></div>
+                        <p class="news-card__date">2 августа, 2019</p>
+                        <h3 class="news-card__label">Национальное достояние – парки</h3>
+                        <div class="news-card__correct">
+                            <div>
+                                <p class="news-card__text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где</p>
+                            </div>
+                        </div>
+                        <p class="news-card__source">Лента.ру</p>
+                    </div>
+                    <div class="news-card__item">
+                            <div class="news-card__image"></div>
+                            <p class="news-card__date">2 августа, 2019</p>
+                            <h3 class="news-card__label">Национальное достояние – парки</h3>
+                            <div class="news-card__correct">
+                                <div>
+                                    <p class="news-card__text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где</p>
+                                </div>
+                            </div>
+                            <p class="news-card__source">Лента.ру</p>
+                        </div>
+                        <div class="news-card__item">
+                                <div class="news-card__image"></div>
+                                <p class="news-card__date">2 августа, 2019</p>
+                                <h3 class="news-card__label">Национальное достояние – парки</h3>
+                                <div class="news-card__correct">
+                                    <div>
+                                        <p class="news-card__text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где</p>
+                                    </div>
+                                </div>
+                                <p class="news-card__source">Лента.ру</p>
+                            </div>
+                            <div class="news-card__item">
+                                    <div class="news-card__image"></div>
+                                    <p class="news-card__date">2 августа, 2019</p>
+                                    <h3 class="news-card__label">Национальное достояние – парки</h3>
+                                    <div class="news-card__correct">
+                                        <div>
+                                            <p class="news-card__text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где</p>
+                                        </div>
+                                    </div>
+                                    <p class="news-card__source">Лента.ру</p>
+                                </div>
                 </div>
                 <form class="news-card__form" name="formShowMore">
                     <button class="news-card__button-show-more button" name="show" type="submit">Показать еще</button>
@@ -76,33 +140,30 @@
 
         <section class="author root__section">
             <div class="author__image-box">
-                <img src="<%=require('./images/image-03.jpg')%>" alt="Фотография автора">
+                <img src="<%=require('./images/author.png')%>" alt="Фотография автора" class="author__image">
             </div>
             <div class="author__content">
                 <h2 class="title">Об авторе</h2>
-                <p class="text">Это блок с описаением автора проекта. Здесь следует указать, как вас зовут, чем вы
-                    занимаетесь, какими технологиями разработки владете.</p>
-                <p class="text">Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем
-                    можете помочь потенциальным заказчикам.</p>
-                <p class="text">Если хотите, оставьте свои контакты: email и телефон. Так заказчики смогут с вами
-                    связаться.</p>
+                <p class="text">Это блок с описаением автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владете.</p>
+                <p class="text">Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам.</p>
+                <p class="text">Если хотите, оставьте свои контакты: email и телефон. Так заказчики смогут с вами связаться.</p>
             </div>
         </section>
-
+ 
         <footer class="footer root__section">
             <nav class="footer__column footer__column_info">
                 <ul class="footer__nav-list">
-                    <li class="footer__nav-list-item"><a href="#">Главная</a></li>
-                    <li class="footer__nav-list-item"><a href="#">О проекте</a></li>
-                    <li class="footer__nav-list-item"><a href="#">Яндекс.Практикум</a></li>
+                    <li class="footer__nav-list-item"><a href="./index.html">Главная</a></li>
+                    <li class="footer__nav-list-item"><a href="./about.html">О проекте</a></li>
+                    <li class="footer__nav-list-item"><a href="https://praktikum.yandex.ru/" target="_blank">Яндекс.Практикум</a></li>
                 </ul>
-                <p class="footer__copyright">&copy; 2019 Supersite</p>
+                <p class="footer__copyright">&copy; 2019&nbsp;Supersite</p>
             </nav>
             <div class="footer__column footer__column_social">
                 <div class="footer__social-box">
-                    <a href="#" target="_blank" class="footer__link"><img class="footer__social-item"
+                    <a href="https://www.facebook.com/profile.php?id=100002924957852&ref=bookmarks" target="_blank" class="footer__link"><img class="footer__social-item"
                             src="<%=require('./images/github-icon.svg')%>" alt="Логотип github"></a>
-                    <a href="#" target="_blank" class="footer__link"><img class="footer__social-item"
+                    <a href="https://github.com/BelisonRazer" target="_blank" class="footer__link"><img class="footer__social-item"
                             src="<%=require('./images/facebook-icon.svg')%>" alt="Логотип facebook"></a>
                 </div>
             </div>

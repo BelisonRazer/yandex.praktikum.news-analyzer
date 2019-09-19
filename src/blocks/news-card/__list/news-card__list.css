@@ -7,3 +7,15 @@
 
     width: 100%;
 }
+
+@media screen and (min-width: 768px) {
+    .news-card__list {
+        padding: 40px 0 40px 0;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .news-card__list {
+        padding: 80px 0 80px 0;
+    }
+}

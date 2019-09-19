@@ -1,0 +1,26 @@
+@import url(./_color/_black/heading__title_color_black.css);
+@import url(./_color/_white/heading__title_color_white.css);
+
+.heading__title {
+    margin: 16px 0 16px 16px;
+
+    font-family: Robotoslab2-regular;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+@media screen and (min-width: 768px) {
+    .heading__title {
+        margin: 22px 0 22px 40px;
+
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .heading__title  {
+        margin: 22px 0 22px 104px;
+    }
+}

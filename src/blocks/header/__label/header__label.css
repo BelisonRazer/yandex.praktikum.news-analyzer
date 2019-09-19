@@ -9,3 +9,10 @@
 
     color: #ffffff;
 }
+
+@media screen and (min-width: 1440px) {
+    .header__label {
+        font-size: 60px;
+        line-height: 64px;  
+    }
+}

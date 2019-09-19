@@ -14,6 +14,20 @@ const basicPlugins = [
         template: './src/index.html',
         filename: 'index.html'
     }),
+    new HtmlWebpackPlugin({
+        title: 'О проекте',
+        inject: false,
+        hash: true,
+        template: 'src/about.html',
+        filename: 'about.html'
+    }),
+    new HtmlWebpackPlugin({
+        title: 'Аналитика',
+        inject: false,
+        hash: true,
+        template: 'src/analitics.html',
+        filename: 'analitics.html'
+    }),
     new MiniCssExtractPlugin({
         filename: 'style.[contenthash].css'
     }),
@@ -29,6 +43,20 @@ const prodPlugins = [
         hash: true,
         template: './src/index.html',
         filename: 'index.html'
+    }),
+    new HtmlWebpackPlugin({  // Also generate a test.html
+        title: 'Custom template',
+        inject: false,
+        hash: true,
+        template: 'src/about.html',
+        filename: 'about.html'
+    }),
+    new HtmlWebpackPlugin({
+        title: 'Аналитика',
+        inject: false,
+        hash: true,
+        template: 'src/analitics.html',
+        filename: 'analitics.html'
     }),
     new MiniCssExtractPlugin({
         filename: 'style.[contenthash].min.css'
@@ -71,10 +99,7 @@ module.exports = (env, options) => {
                             options: {
                                 mozjpeg: {
                                     progressive: true,
-                                    quality: 65
-                                },
-                                webp: {
-                                    quality: 75
+                                    quality: 95
                                 }
                             }
                         }

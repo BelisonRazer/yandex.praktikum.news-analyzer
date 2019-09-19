@@ -1,0 +1,19 @@
+.circle-preloader__text {
+    font-family: Roboto-light, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+
+    color: #B6BCBF;
+
+    margin: 0;
+
+    display: none;
+}
+
+@media screen and (min-width: 1440px) {
+    .circle-preloader__text {
+        display: inline;
+    }
+}

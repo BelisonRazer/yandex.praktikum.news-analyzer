@@ -1,0 +1,9 @@
+.tech__item {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+}
+
+.tech__item > .text {
+    margin-bottom: 23px;
+}

@@ -1,0 +1,15 @@
+.heading__link {
+    
+}
+
+.heading__link, .heading__link:active {
+    color: #B6BCBF;
+}
+
+.heading__link:hover {
+    color: #1A1B22;
+}
+
+.header > .heading > .heading__nav > .heading__list > .heading__item > .heading__link:hover {
+    color: #ffffff;
+}

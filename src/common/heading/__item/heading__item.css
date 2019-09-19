@@ -1,0 +1,22 @@
+.heading__item {
+    font-family: Roboto-regular, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 52px;
+}
+
+.heading__item:not(:last-child) {
+    margin-right: 11px;
+}
+
+@media screen and (min-width: 768px) {
+    .heading__item {
+        line-height: 64px;
+        font-size: 18px;
+    }
+
+    .heading__item:not(:last-child) {
+        margin-right: 34px;
+    }
+}

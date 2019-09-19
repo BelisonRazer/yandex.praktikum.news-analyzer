@@ -1,0 +1,25 @@
+.tech__item-container {
+    display: grid;
+    grid-template-columns: repeat(2, 100px);
+    justify-content: center;
+    grid-gap: 64px 15%;    
+}
+
+@media screen and (min-width: 768px) {
+    .tech__item-container {
+        grid-template-columns: repeat(4, 100px);
+        justify-content: space-around;
+        grid-column-gap: 50px;
+        grid-row-gap: auto;
+
+        margin: 0 50px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .tech__item-container {
+        margin: 13px 0 0 0;
+
+        grid-column-gap: 72px;
+    }
+}

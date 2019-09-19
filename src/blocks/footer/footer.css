@@ -17,3 +17,13 @@
 
     padding: 20px 0 22px 0;
 }
+
+@media screen and (min-width: 768px) {
+    .footer {
+        padding: 0;
+
+        height: 64px;
+
+        align-items: center;
+    }
+}

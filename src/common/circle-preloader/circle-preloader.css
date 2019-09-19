@@ -1,3 +1,5 @@
+@import url(./__text/circle-preloader__text.css);
+
 .circle-preloader {
     display: block;
 	width: 50px;
@@ -15,4 +17,10 @@
 	margin: auto;
 	
 	animation: spin .75s infinite linear;    
+}
+
+@media screen and (min-width: 1440px) {
+    .circle-preloader {
+        margin-bottom: 24px;
+    }
 }

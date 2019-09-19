@@ -5,6 +5,8 @@
     border: 1px solid #2F71E5;
 
     color: #ffffff;
+    
+    z-index: 100;
 }
 
 .header__button:hover {
@@ -20,4 +22,15 @@
 
 .header__button:focus {
     outline: none;
+}
+
+@media screen and (min-width: 768px) {
+    .header__button {
+        grid-column: 1;
+        grid-row: 1;
+
+        justify-self: right;
+
+        width: 160px;
+    }
 }

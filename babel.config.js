@@ -3,7 +3,7 @@ const presets = [
         "@babel/env",
         {
             targets: { // версии браузеров которые нужно поддерживать
-                edge: "17",
+                edge: "15",
                 firefox: "60",
                 chrome: "64",
                 safari: "11.1",
@@ -12,7 +12,7 @@ const presets = [
             corejs: "3.0.0", // явно проставить версию corejs
                      "targets": { // указать цели, для полифилов
                             "esmodules": true, // es модули 
-                             "ie": "11" // Internet Expolrer 11
+                             "ie": "9" // Internet Expolrer 11
                  }
         },
     ],

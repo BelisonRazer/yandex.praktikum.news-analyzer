@@ -1,0 +1,4 @@
+.github__head-box {
+    display: flex;
+    justify-content: space-between;
+}

@@ -13,6 +13,11 @@
 @import "./__button-show-more/news-card__button-show-more.css";
 @import "./__head-title-box/news-card__head-title-box.css";
 @import "./__form/news-card__form.css";
+@import "./__date/news-card__date.css";
+@import "./__image/news-card__image.css";
+@import "./__label/news-card__label.css";
+@import "./__source/news-card__source.css";
+@import "./__text/news-card__text.css";
 
 .news-card {
     background-color: #F5F6F7;

@@ -1,8 +1,25 @@
 .footer__nav-list-item {
+    font-family: Roboto-light, sans-serif;
     font-size: 18px;
-    /* line-height: 48px; */
+}
+
+.footer__nav-list-item > a:hover {
+    color: #B6BCBF;
 }
 
 .footer__nav-list-item:not(:last-child) {
     margin-bottom: 35px;
+}
+
+@media screen and (min-width: 768px) {
+    .footer__nav-list-item:not(:last-child) {
+        margin-right: 25px;
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .footer__nav-list-item:not(:last-child) {
+        margin-right: 48px;
+    }
 }

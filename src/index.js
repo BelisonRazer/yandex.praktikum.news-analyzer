@@ -1,4 +1,5 @@
 import "./style.css";
+import "./common/glider/glider";
 
 const button = document.querySelector('.header__button');
 const search = document.querySelector('.news-card__search');
