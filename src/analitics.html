@@ -49,7 +49,6 @@
                     <div class="table__range-number">75</div>
                     <div class="table__range-number">100</div>
                 </div>
-                <!-- <div class="table__col-1"> -->
                 <p class="table__cell-date">19, пн</p>
                 <div class="table__cell-number temp1">
                     <p class="table__cell-number-count">15</p>
@@ -89,23 +88,26 @@
         </section>
 
         <footer class="footer root__section">
-            <nav class="footer__column footer__column_info">
-                <ul class="footer__nav-list">
-                    <li class="footer__nav-list-item"><a href="./index.html">Главная</a></li>
-                    <li class="footer__nav-list-item"><a href="./about.html">О проекте</a></li>
-                    <li class="footer__nav-list-item"><a href="https://praktikum.yandex.ru/" target="_blank">Яндекс.Практикум</a></li>
-                </ul>
-                <p class="footer__copyright">&copy; 2019&nbsp;Supersite</p>
-            </nav>
-            <div class="footer__column footer__column_social">
-                <div class="footer__social-box">
-                    <a href="https://www.facebook.com/profile.php?id=100002924957852&ref=bookmarks" target="_blank" class="footer__link"><img class="footer__social-item"
-                        src="<%=require('./images/github-icon.svg')%>" alt="Логотип github"></a>
-                    <a href="https://github.com/BelisonRazer" target="_blank" class="footer__link"><img class="footer__social-item"
-                        src="<%=require('./images/facebook-icon.svg')%>" alt="Логотип facebook"></a>
+            <div class="footer__container">
+                <nav class="footer__column footer__column_info">
+                    <ul class="footer__nav-list">
+                        <li class="footer__nav-list-item"><a href="./index.html">Главная</a></li>
+                        <li class="footer__nav-list-item"><a href="./about.html">О проекте</a></li>
+                        <li class="footer__nav-list-item"><a href="https://praktikum.yandex.ru/" target="_blank">Яндекс.Практикум</a></li>
+                    </ul>
+                    <p class="footer__copyright">&copy; 2019&nbsp;Supersite</p>
+                </nav>
+                <div class="footer__column footer__column_social">
+                    <div class="footer__social-box">
+                        <a href="https://www.facebook.com/profile.php?id=100002924957852&ref=bookmarks" target="_blank" class="footer__link"><img class="footer__social-item"
+                                src="<%=require('./images/github-icon.svg')%>" alt="Логотип github"></a>
+                        <a href="https://github.com/BelisonRazer" target="_blank" class="footer__link"><img class="footer__social-item"
+                                src="<%=require('./images/facebook-icon.svg')%>" alt="Логотип facebook"></a>
+                    </div>
                 </div>
-            </div>
+            </div>               
         </footer>
+
     </div>
     
     <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>

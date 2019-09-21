@@ -7,10 +7,22 @@
     font-family: Roboto-regular, sans-serif;
     font-style: normal;
     font-weight: normal;
+
+    box-sizing: border-box;
+
+    padding: 0 0 224px 0;
+
+    position: relative;
 }
 
-@keyframes spin {
-	100% {
-		transform: rotate(360deg);
-	}
+@media screen and (min-width: 768px) {
+    .root {
+        padding: 0 0 64px 0;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .root {
+        padding: 0 0 80px 0;
+    }
 }

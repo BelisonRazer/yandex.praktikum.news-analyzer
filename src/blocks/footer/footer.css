@@ -7,23 +7,27 @@
 @import url(./__nav-list/footer__nav-list.css);
 @import url(./__social-item/footer__social-item.css);
 @import url(./__social-box/footer__social-box.css);
+@import url(./__container/footer__container.css);
 
 .footer {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
 
     min-width: 320px;
 
-    padding: 20px 0 22px 0;
+    background-color: #ffffff;
 }
 
 @media screen and (min-width: 768px) {
     .footer {
-        padding: 0;
-
         height: 64px;
+    }
+}
 
-        align-items: center;
+@media screen and (min-width: 1440px) {
+    .footer {
+        height: 80px;
+
+        left: calc((100vw - 1440px) / 2);
     }
 }

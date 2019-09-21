@@ -5,7 +5,6 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackMd5Hash = require('webpack-md5-hash');
 const webpack = require('webpack');
-// const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 const basicPlugins = [
     new HtmlWebpackPlugin({
@@ -48,14 +47,14 @@ const prodPlugins = [
         title: 'Custom template',
         inject: false,
         hash: true,
-        template: 'src/about.html',
+        template: '.src/about.html',
         filename: 'about.html'
     }),
     new HtmlWebpackPlugin({
         title: 'Аналитика',
         inject: false,
         hash: true,
-        template: 'src/analitics.html',
+        template: '.src/analitics.html',
         filename: 'analitics.html'
     }),
     new MiniCssExtractPlugin({

@@ -25,6 +25,12 @@
 @import url(../node_modules/@glidejs/glide/dist/css/glide.core.css);
 @import url(../node_modules/@glidejs/glide/dist/css/glide.theme.css);
 
+@keyframes spin {
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
 body {
     margin: 0;
 }
