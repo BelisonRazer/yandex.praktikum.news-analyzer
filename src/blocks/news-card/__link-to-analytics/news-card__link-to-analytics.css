@@ -8,6 +8,12 @@
     color: #1A1B22;
 }
 
+.news-card__link-to-analytics:hover {
+    text-decoration: underline;
+
+    color: #444444;
+}
+
 .news-card__link-to-analytics::after {
     content: url("../../../images/arrow-r.png");
 

@@ -1,11 +1,7 @@
-.active_color_white {
-
-}
-
-ul > .active_color_white > a, ul > .active_color_white > a:active, ul > .active_color_white > a:hover, ul > .active_color_white > a:visited {
+.active_color_white > .heading__link, .active_color_white > .heading__link:active, .active_color_white > .heading__link:hover, .active_color_white > .heading__link:visited {
     color: #ffffff;
 }
 
-ul > .active_color_white {
+.active_color_white {
     border-bottom: 3px solid #ffffff;
 }

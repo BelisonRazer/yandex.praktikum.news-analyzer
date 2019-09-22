@@ -10,6 +10,14 @@
     color: #1A1B22;
 }
 
-.header > .heading > .heading__nav > .heading__list > .heading__item > .heading__link:hover {
+.heading > .heading__nav > .heading__list > .heading__item > .heading__link:hover {
     color: #ffffff;
+}
+
+.heading_about > .heading__nav > .heading__list > .heading__item > .heading__link:hover {
+    color: #1A1B22;
+}
+
+.heading_analytics > .heading__nav > .heading__list > .heading__item > .heading__link:hover {
+    color: #1A1B22;
 }

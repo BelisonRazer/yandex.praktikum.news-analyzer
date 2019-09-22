@@ -6,6 +6,7 @@
 @import url(./__input/header__input.css);
 @import url(./__button/header__button.css);
 @import url(./__label-container/header__label-container.css);
+@import url(./_no-bg/header_no-bg.css);
 
 .header {
     display: flex;

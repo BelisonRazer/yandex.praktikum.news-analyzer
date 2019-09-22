@@ -14,11 +14,11 @@
 @import url(./blocks/footer/footer.css);
 @import url(./blocks/root/root.css);
 @import url(./blocks/news-card/news-card.css);
-@import url(./blocks/about/about.css);
+/* @import url(./blocks/about/about.css); */
 @import url(./blocks/to-customers/to-customers.css);
 @import url(./blocks/tech/tech.css);
 @import url(./blocks/github/github.css);
-@import url(./blocks/analytics/analytics.css);
+/* @import url(./blocks/analytics/analytics.css); */
 @import url(./blocks/answer/answer.css);
 @import url(./blocks/table/table.css);
 
