@@ -9,7 +9,9 @@
 }
 
 .github__button > a:hover {
-    color: #B6BCBF;
+    text-decoration: underline;
+
+    color: #444444;
 }
 
 @media screen and (min-width: 768px) {

@@ -21,6 +21,12 @@
      }
 }
 
+@media screen and (max-width: 768px) {
+    .github__form {
+        margin-bottom: 12px;
+    }
+}
+
 @media screen and (min-width: 1440px) {
     .github__form_go {
         margin-right: 104px;

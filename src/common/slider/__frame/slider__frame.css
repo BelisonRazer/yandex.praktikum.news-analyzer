@@ -4,27 +4,20 @@
     background-color: #ffffff;
     border-radius: 16px;
 
-    max-height: 264px;
-    max-width: 288px;
-}
-
-.slider__frame:not(:last-child) {
-    margin-right: 8px;
+    /* max-height: 264px; */
+    /* max-width: 288px; */
 }
 
 @media screen and (min-width: 768px) {
     .slider__frame  {
         max-height: 242px;
-        max-width: 336px;
+        min-width: 336px;
     }
 }
 
 @media screen and (min-width: 1440px) {
-    .slider__frame:not(:last-child) {
-        margin-right: 16px;
-
+    .slider__frame {
         height: 288px;
-        max-height: 288px;
-        max-width: 400px;
+        width: 100%;
     }
 }
