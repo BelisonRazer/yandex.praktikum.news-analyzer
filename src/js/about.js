@@ -108,10 +108,6 @@ let glide = new Glide('.glide', {
                 after: 16,
             },
         },
-        320: {
-            perView: 1,
-            startAt: 0
-        }
     }
 });
 
