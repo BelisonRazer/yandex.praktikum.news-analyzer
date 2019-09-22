@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
+    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.common.css %>">
     <link rel="shortcut icon" type="image/png" sizes="32x32" href="<%=require('./images/favicon.png')%>">
     <title>NewsAnalyzer</title>
 </head>
@@ -132,7 +132,8 @@
         </footer>
 
     </div>
-    <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
+    <script src="<%= htmlWebpackPlugin.files.chunks.index.entry %>"></script>
+    <script src="<%= htmlWebpackPlugin.files.chunks.common.entry %>"></script>
 </body>
 
 </html>

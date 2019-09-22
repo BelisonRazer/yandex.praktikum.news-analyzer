@@ -1,5 +1,4 @@
-import "./style.css";
-import "./common/glider/glider";
+// import "../style.css";
 
 const button = document.querySelector('.header__button');
 const search = document.querySelector('.news-card__search');
@@ -21,3 +20,4 @@ function showStatus(e) {
 }
 
 button.addEventListener('click', showStatus);
+

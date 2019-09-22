@@ -6,26 +6,34 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackMd5Hash = require('webpack-md5-hash');
 const webpack = require('webpack');
 
+const PATHS = { 
+    src: path.resolve(process.cwd(), 'src'),
+    dist: path.resolve(process.cwd(), 'dist')
+};
+
 const basicPlugins = [
     new HtmlWebpackPlugin({
         inject: false,
         hash: true,
-        template: './src/index.html',
-        filename: 'index.html'
+        template: `${PATHS.src}/index.html`,
+        filename: 'index.html',
+        chunks: ["index", "common"],
     }),
     new HtmlWebpackPlugin({
         title: 'О проекте',
         inject: false,
         hash: true,
-        template: 'src/about.html',
-        filename: 'about.html'
+        template: `${PATHS.src}/about.html`,
+        filename: 'about.html',
+        chunks: ["about", "common"],
     }),
     new HtmlWebpackPlugin({
         title: 'Аналитика',
         inject: false,
         hash: true,
-        template: 'src/analitics.html',
-        filename: 'analitics.html'
+        template: `${PATHS.src}/analytics.html`,
+        filename: 'analytics.html',
+        chunks: ["analytics", "common"],
     }),
     new MiniCssExtractPlugin({
         filename: 'style.[contenthash].css'
@@ -40,22 +48,25 @@ const prodPlugins = [
     new HtmlWebpackPlugin({
         inject: false,
         hash: true,
-        template: './src/index.html',
-        filename: 'index.html'
+        template: `${PATHS.src}/index.html`,
+        filename: 'index.html',
+        chunks: ["index", "common"],
     }),
-    new HtmlWebpackPlugin({  // Also generate a test.html
-        title: 'Custom template',
+    new HtmlWebpackPlugin({
+        title: 'О проекте',
         inject: false,
         hash: true,
-        template: '.src/about.html',
-        filename: 'about.html'
+        template: `${PATHS.src}/about.html`,
+        filename: 'about.html',
+        chunks: ["about", "common"],
     }),
     new HtmlWebpackPlugin({
         title: 'Аналитика',
         inject: false,
         hash: true,
-        template: '.src/analitics.html',
-        filename: 'analitics.html'
+        template: `${PATHS.src}/analytics.html`,
+        filename: 'analytics.html',
+        chunks: ["analytics", "common"],
     }),
     new MiniCssExtractPlugin({
         filename: 'style.[contenthash].min.css'
@@ -71,7 +82,10 @@ module.exports = (env, options) => {
 
     return {
         entry: {
-            main: './src/index.js'
+            index: `${PATHS.src}/js/index`,
+            common: `${PATHS.src}/js/common`,
+            about: `${PATHS.src}/js/about`,
+            analytics: `${PATHS.src}/js/analytics`
         },
         output: {
             path: path.resolve(__dirname, 'dist'),
@@ -81,7 +95,10 @@ module.exports = (env, options) => {
             rules: [{
                     test: /\.js$/,
                     use: {
-                        loader: "babel-loader"
+                        loader: "babel-loader",
+                        // options: {
+                        //     presets: ['babel-preset-env']
+                        // },
                     },
                     exclude: /node_modules/
                 },
@@ -111,6 +128,11 @@ module.exports = (env, options) => {
             ]
         },
         optimization: {
+            // splitChunks: {
+            //     chunks: "all",
+            //     minSize: 1,
+            //     minChunks: 2
+            // },
             minimizer: [new TerserJSPlugin({}), new OptimizeCSSAssetsPlugin({})],
         },
         plugins: mode !== 'production' ? basicPlugins : prodPlugins
