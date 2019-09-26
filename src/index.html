@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.common.css %>">
+    <link rel="shortcut icon" type="image/png" sizes="32x32" href="<%=require('./images/favicon.png')%>">
+    <title>NewsAnalyzer</title>
+</head>
+
+<body>
+    <div class="root">
+
+        <header class="header root__section">
+            <div class="heading">
+                <h2 class="heading__title heading__title_color_white">NewsAnalyzer</h2>
+                <nav class="heading__nav">
+                    <ul class="heading__list">
+                        <li class="heading__item active active_color_white"><a class="heading__link" href="./index.html">Главная</a></li>
+                        <li class="heading__item"><a class="heading__link" href="./about.html">О проекте</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header__main">
+                <div class="header__label-container">
+                    <h1 class="header__label">Что в&nbsp;мире творится?</h1>
+                </div>
+                <p class="header__text">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.</p>
+                <form class="header__search-field" name="searchForm">
+                    <div class="header__input-container">
+                        <input id="word" type="text" name="name" class="header__input err" placeholder="Политика">
+                        <span id="error-word" class="error error_word" aria-live="polite"></span>
+                    </div>
+                    <button id="submit" name="search" type="submit" class="button header__button">Искать</button>
+                </form>
+            </div>
+        </header>
+
+        <section class="news-card root__section">
+            <div class="news-card__content">
+                <div class="news-card__search">
+                    <i class="circle-preloader"></i>
+                    <p class="circle-preloader__text">Идет поиск новостей...</p>
+                </div>
+                <div class="news-card__not-found">
+                    <div class="news-card__icon"></div>
+                    <h2 class="news-card__title">Ничего не &nbsp;найдено</h2>
+                    <p class="news-card__message">К сожалению по вашему запросу ничего не найдено.</p>
+                </div>
+                <div class="news-card__list">
+                    <div class="news-card__head">
+                        <div class="news-card__head-title-box">
+                            <h2 class="news-card__head-title">Результаты поиска</h2>
+                        </div>
+                        <a href="./analytics.html" class="news-card__link-to-analytics">Посмотреть аналитику</a>
+                    </div>
+                    <div class="news-card__item-container">
+                        <div class="news-card__item">
+                            <div class="news-card__image"></div>
+                            <p class="news-card__date">2 августа, 2019</p>
+                            <h3 class="news-card__label">Национальное достояние – парки</h3>
+                            <div class="news-card__correct">
+                                <div>
+                                    <p class="news-card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков</p>
+                                </div>
+                            </div>
+                            <p class="news-card__source">Лента.ру</p>
+                        </div>
+                        <div class="news-card__item">
+                            <div class="news-card__image"></div>
+                            <p class="news-card__date">2 августа, 2019</p>
+                            <h3 class="news-card__label">Национальное достояние – парки</h3>
+                            <div class="news-card__correct">
+                                <div>
+                                    <p class="news-card__text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного из местных чудес природы.</p>
+                                </div>
+                            </div>
+                            <p class="news-card__source">Лента.ру</p>
+                        </div>
+                        <div class="news-card__item">
+                            <div class="news-card__image"></div>
+                            <p class="news-card__date">2 августа, 2019</p>
+                            <h3 class="news-card__label">Национальное достояние – парки</h3>
+                            <div class="news-card__correct">
+                                <div>
+                                    <p class="news-card__text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где</p>
+                                </div>
+                            </div>
+                            <p class="news-card__source">Лента.ру</p>
+                        </div>
+                    </div>
+                    <form class="news-card__form" name="formShowMore">
+                        <button class="news-card__button-show-more button" name="show" type="submit">Показать еще</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="author root__section">
+            <div class="author__image-box">
+                <img src="<%=require('./images/author.png')%>" alt="Фотография автора" class="author__image">
+            </div>
+            <div class="author__content">
+                <h2 class="title">Об авторе</h2>
+                <p class="text">Это блок с описаением автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владете.</p>
+                <p class="text">Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам.</p>
+                <p class="text">Если хотите, оставьте свои контакты: email и телефон. Так заказчики смогут с вами связаться.</p>
+            </div>
+        </section>
+ 
+        <footer class="footer root__section">
+            <div class="footer__container">
+                <nav class="footer__column footer__column_info">
+                    <ul class="footer__nav-list">
+                        <li class="footer__nav-list-item"><a href="./index.html">Главная</a></li>
+                        <li class="footer__nav-list-item"><a href="./about.html">О проекте</a></li>
+                        <li class="footer__nav-list-item"><a href="https://praktikum.yandex.ru/" target="_blank">Яндекс.Практикум</a></li>
+                    </ul>
+                    <p class="footer__copyright">&copy; 2019&nbsp;Supersite</p>
+                </nav>
+                <div class="footer__column footer__column_social">
+                    <div class="footer__social-box">
+                        <a href="https://www.facebook.com/profile.php?id=100002924957852&ref=bookmarks" target="_blank" class="footer__link"><img class="footer__social-item"
+                                src="<%=require('./images/github-icon.svg')%>" alt="Логотип github"></a>
+                        <a href="https://github.com/BelisonRazer" target="_blank" class="footer__link"><img class="footer__social-item"
+                                src="<%=require('./images/facebook-icon.svg')%>" alt="Логотип facebook"></a>
+                    </div>
+                </div>
+            </div>               
+        </footer>
+
+    </div>
+    <script src="<%= htmlWebpackPlugin.files.chunks.index.entry %>"></script>
+    <script src="<%= htmlWebpackPlugin.files.chunks.common.entry %>"></script>
+</body>
+
+</html>

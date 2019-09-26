@@ -1,0 +1,32 @@
+.news-card__button-show-more {
+    width: 288px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 5px 15px rgba(14, 26, 57, 0.2);
+
+    border: 1px solid #FFFFFF;
+    border-radius: 80px;
+
+    color: #1A1B22;
+}
+
+.news-card__button-show-more:hover {
+    opacity: 0.9;
+}
+
+.news-card__button-show-more:active, .news-card__button-show-more:focus {
+    outline: none;
+}
+
+@media screen and (min-width: 768px) {
+    .news-card__button-show-more {
+        width: 240px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .news-card__button-show-more {
+        width: 288px;
+        height: 64px;
+    }
+}

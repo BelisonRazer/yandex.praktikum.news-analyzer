@@ -1,0 +1,72 @@
+.glider {
+    
+}
+
+.glide > .glide__bullets {
+    bottom: -21px;
+}
+
+.glide__bullets > .slider__bullet {
+    background-color: #D1D2D6;
+}
+
+.glide__bullets > .slider__bullet:hover {
+    background-color: #1A1B22;
+}
+
+.glide__bullets > .glide__bullet--active {
+    background-color: #1A1B22;
+}
+
+.glide > .glide__arrows {
+    display: none;
+}
+
+.glide__arrows > .glide__arrow {
+    padding: 0;
+
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+    border: 0;
+
+    background-color: #1A1B22;
+}
+
+.glide__arrows > .glide__arrow--left {
+    background-image: url(../../images/glider-arrow-left.svg);
+    background-repeat: no-repeat;
+    background-position: 45% center;
+
+    
+}
+
+.glide__arrows > .glide__arrow--right {
+    background-image: url(../../images/glider-arrow-right.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@media screen and (min-width: 768px) {
+    .glide > .glide__bullets {
+        bottom: -25px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .glide {
+        margin-bottom: 48px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .glide > .glide__bullets {
+        bottom: -48px;
+    }
+
+    .glide > .glide__arrows {
+        display: block;
+    }
+}
+

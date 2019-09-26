@@ -1,0 +1,18 @@
+.slider__date {
+    font-family: Roboto-light, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;    
+
+    color: #B6BCBF;
+    text-align: left;
+
+    margin: 0 16px 16px 16px;
+}
+
+@media screen and (min-width: 768px) {
+    .slider__date {
+        margin: 0 24px 16px 24px;
+    }
+}

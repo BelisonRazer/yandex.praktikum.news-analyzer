@@ -1,0 +1,36 @@
+.header__button {
+    background: #2F71E5;
+    box-shadow: 0px 5px 15px rgba(14, 26, 57, 0.2);
+
+    border: 1px solid #2F71E5;
+
+    color: #ffffff;
+    
+    z-index: 100;
+}
+
+.header__button:hover {
+    background: #347EFF;
+    border: 1px solid #347EFF;
+}
+
+.header__button:active {
+    outline: none;
+    background: #2A65CC;
+    border: 1px solid #2A65CC;
+}
+
+.header__button:focus {
+    outline: none;
+}
+
+@media screen and (min-width: 768px) {
+    .header__button {
+        grid-column: 1;
+        grid-row: 1;
+
+        justify-self: right;
+
+        width: 160px;
+    }
+}

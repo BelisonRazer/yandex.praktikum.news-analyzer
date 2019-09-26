@@ -1,0 +1,16 @@
+.footer__nav-list {
+    list-style: none;
+    
+    padding: 0;
+    margin: 0 0 40px 0;
+}
+
+@media screen and (min-width: 768px) {
+    .footer__nav-list {
+        grid-column: 2;
+
+        display: flex;
+
+        margin: 0;
+    }
+}

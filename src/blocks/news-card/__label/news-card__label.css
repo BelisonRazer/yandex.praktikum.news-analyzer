@@ -1,0 +1,23 @@
+.news-card__label {
+    font-family: Robotoslab-regular;
+    font-size: 22px;
+    font-weight: normal;
+    line-height: 26px;
+
+    margin: 0 16px 10px 16px;
+}
+
+@media screen and (min-width: 768px) {
+    .news-card__label {
+        line-height: 24px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .news-card__label {
+        font-size: 26px;
+        line-height: 30px;
+
+        margin: 0 24px 16px 24px;
+    }
+}

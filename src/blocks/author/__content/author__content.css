@@ -1,0 +1,25 @@
+.author__content {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+
+    margin: 0 16px;
+}
+
+@media screen and (min-width: 768px) {
+    .author__content {
+        margin: auto 40px auto 0;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .author__content {
+        margin: 51px 104px auto 0;
+
+        max-width: 600px;
+    }
+
+    .author__content > .text:not(:last-of-type) {
+        margin-bottom: 24px;
+    }
+}

@@ -1,0 +1,7 @@
+.active_color_black > .heading__link, .active_color_black > .heading__link:active, .active_color_black > .heading__link:hover, .active_color_black > .heading__link:visited {
+    color: #1A1B22;
+}
+
+.active_color_black {
+    border-bottom: 3px solid #1A1B22;
+}

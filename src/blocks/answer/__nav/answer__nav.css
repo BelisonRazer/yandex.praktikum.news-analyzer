@@ -1,0 +1,23 @@
+.answer__nav {
+    display: none;
+
+    margin: 0 40px 64px 40px;
+
+    font-family: Roboto-light, sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+
+    color: #B6BCBF;
+}
+
+@media screen and (min-width: 768px) {
+    .answer__nav {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .answer__nav {
+        margin: 0 104px 80px 104px;
+    }
+}

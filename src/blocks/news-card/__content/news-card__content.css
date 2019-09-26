@@ -1,0 +1,15 @@
+.news-card__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+}
+
+.temp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    
+    background-color: #F5F6F7;
+}

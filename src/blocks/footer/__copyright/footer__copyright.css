@@ -1,0 +1,15 @@
+.footer__copyright {
+    margin: 0;
+
+    opacity: 0.7;
+    color: #B6BCBF;
+
+    font-size: 16px;
+    line-height: 22px;
+}
+
+@media screen and (min-width: 768px) {
+    .footer__copyright {
+        grid-column: 1;
+    }
+}

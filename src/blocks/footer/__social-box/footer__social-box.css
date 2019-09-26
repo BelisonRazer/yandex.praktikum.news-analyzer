@@ -1,0 +1,12 @@
+.footer__social-box {
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.footer__social-box .footer__link:first-child {
+    margin-right: 27px;
+}

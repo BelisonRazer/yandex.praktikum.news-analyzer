@@ -1,0 +1,30 @@
+@import url(./__cell-date/table__cell-date.css);
+@import url(./__cell-number-count/table__cell-number-count.css);
+@import url(./__cell-number/table__cell-number.css);
+@import url(./__col-1/table__col-1.css);
+@import url(./__col-2/table__col-2.css);
+@import url(./__date/table__date.css);
+@import url(./__inner/table__inner.css);
+@import url(./__mentions/table__mentions.css);
+@import url(./__outline/table__outline.css);
+@import url(./__title-box/table__title-box.css);
+@import url(./__range/table__range.css);
+@import url(./__range-number/table__range-number.css);
+
+.table {
+    background-color: #F5F6F7;
+
+    padding: 24px 0 24px 0;
+}
+
+@media screen and (min-width: 768px) {
+    .table {
+        padding: 40px 0 40px 0;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .table {
+        padding: 80px 0 80px 0;
+    }
+}

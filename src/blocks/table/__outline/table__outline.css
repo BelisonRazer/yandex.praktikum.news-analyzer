@@ -1,0 +1,6 @@
+.table__outline {
+    border-bottom: 1px solid #1A1B22;
+    margin-bottom: 10px;
+
+    grid-column: 1 / -1;
+}

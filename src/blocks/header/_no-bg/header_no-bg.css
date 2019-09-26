@@ -1,0 +1,4 @@
+.root > .header_no-bg {
+    background-image: none;
+    background-color: #ffffff;
+}

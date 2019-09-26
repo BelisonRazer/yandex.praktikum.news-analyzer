@@ -1,0 +1,15 @@
+.slider__name {
+    font-family: Robotoslab-regular;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;  
+    
+    margin: 0;
+}
+
+@media screen and (min-width: 1440px) {
+    .slider__name {
+        font-size: 26px;       
+    }
+}

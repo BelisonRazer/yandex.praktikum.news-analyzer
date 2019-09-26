@@ -1,0 +1,23 @@
+.heading__link {
+    
+}
+
+.heading__link, .heading__link:active {
+    color: #B6BCBF;
+}
+
+.heading__link:hover {
+    color: #1A1B22;
+}
+
+.heading > .heading__nav > .heading__list > .heading__item > .heading__link:hover {
+    color: #ffffff;
+}
+
+.heading_about > .heading__nav > .heading__list > .heading__item > .heading__link:hover {
+    color: #1A1B22;
+}
+
+.heading_analytics > .heading__nav > .heading__list > .heading__item > .heading__link:hover {
+    color: #1A1B22;
+}

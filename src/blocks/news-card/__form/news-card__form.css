@@ -1,0 +1,11 @@
+.news-card__form {
+    margin: 0 16px;
+
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+    .news-card__form {
+        margin: auto;
+    }
+}

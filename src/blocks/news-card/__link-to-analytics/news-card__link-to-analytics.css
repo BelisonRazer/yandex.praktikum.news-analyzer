@@ -1,0 +1,32 @@
+.news-card__link-to-analytics {
+    font-family: Roboto-regular, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+
+    color: #1A1B22;
+}
+
+.news-card__link-to-analytics:hover {
+    text-decoration: underline;
+
+    color: #444444;
+}
+
+.news-card__link-to-analytics::after {
+    content: url("../../../images/arrow-r.png");
+
+    position: relative;
+    top: 2px;
+    left: 7px;
+}
+
+@media screen and (min-width: 768px) {
+    .news-card__link-to-analytics {
+        position: relative;
+        right: 5px;
+
+        margin: auto 0;
+    }
+}

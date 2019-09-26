@@ -1,0 +1,17 @@
+.slider__text {
+    font-family: Roboto-light, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+
+    text-align: left;
+
+    margin: 0 16px 0 16px;
+}
+
+@media screen and (min-width: 768px) {
+    .slider__text {
+        margin: 0 24px 16px 24px;
+    }
+}

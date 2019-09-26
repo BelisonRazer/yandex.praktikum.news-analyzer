@@ -1,0 +1,25 @@
+.github__title-box {
+    max-width: 185px;
+
+    margin: 0 16px 16px 16px;
+}
+
+.github__title-box > .title {
+    margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+    .github__title-box {
+        margin: 0 40px 24px 40px; /* 0 40 (32 без gap в slider) 40 */
+
+        max-width: 336px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .github__title-box {
+        margin: 0 104px 48px 104px; /* 0 104 (64 без gap в slider) 104 */
+
+        max-width: 60%;
+    }
+}

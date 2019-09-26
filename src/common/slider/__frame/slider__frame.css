@@ -1,0 +1,23 @@
+.slider__frame {
+    text-align: center;
+
+    background-color: #ffffff;
+    border-radius: 16px;
+
+    /* max-height: 264px; */
+    /* max-width: 288px; */
+}
+
+@media screen and (min-width: 768px) {
+    .slider__frame  {
+        max-height: 242px;
+        min-width: 336px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .slider__frame {
+        height: 288px;
+        width: 100%;
+    }
+}

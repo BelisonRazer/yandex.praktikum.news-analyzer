@@ -1,0 +1,21 @@
+.table__range-number {
+    width: 80px;
+    /* height: 20px; */
+
+    font-family: Roboto-light, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.4px;
+
+    color: #B6BCBF;
+}
+
+.table__range-number:first-of-type {
+    text-align: left;
+}
+
+.table__range-number:last-of-type {
+    text-align: end;
+}

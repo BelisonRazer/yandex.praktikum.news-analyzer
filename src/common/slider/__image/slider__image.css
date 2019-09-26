@@ -1,0 +1,12 @@
+.slider__image {
+    background: url("../../../images/vasilyy.png") center center no-repeat;
+    width: 48px;
+
+    margin-right: 12px;
+}
+
+@media screen and (min-width: 1440px) {
+    .slider__image  {
+        margin-right: 16px;
+    }
+}

@@ -1,0 +1,34 @@
+.table__cell-number {
+    margin: auto 0;
+    padding: 4px 0;
+
+    background-color: #2F71E5;
+}
+
+.temp1 {
+    width: calc(15% - 10px);
+}
+
+.temp2 {
+    width: calc(18% - 10px);
+}
+
+.temp3 {
+    width: calc(11% - 10px);
+}
+
+.temp4 {
+    width: calc(39% - 10px);
+}
+
+.temp5 {
+    width: calc(45% - 10px);
+}
+
+.temp6 {
+    width: calc(73% - 10px);
+}
+
+.temp7 {
+    width: calc(34% - 10px);
+}

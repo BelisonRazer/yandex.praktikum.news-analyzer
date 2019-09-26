@@ -1,0 +1,21 @@
+.table__inner {
+    display: grid;
+    grid-template-columns: 60px auto;
+    grid-gap: 8px 18px;
+
+    margin: 0 16px 0 16px;
+}
+
+@media screen and (min-width: 768px) {
+    .table__inner {
+        margin: 0 40px 0 40px;
+
+        grid-gap: 8px 50px;
+    }   
+}
+
+@media screen and (min-width: 1440px) {
+    .table__inner {
+        margin: 0 104px 0 104px;
+    }   
+}

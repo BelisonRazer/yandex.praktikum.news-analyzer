@@ -1,0 +1,18 @@
+.slider__info-box {
+    display: flex;
+    justify-content: flex-start;
+
+    margin: 0 16px 16px 16px;
+}
+
+@media screen and (min-width: 768px) {
+    .slider__info-box {
+        margin: 0 24px 16px 24px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .slider__info-box {
+        margin: 0 24px 22px 24px;
+    }
+}

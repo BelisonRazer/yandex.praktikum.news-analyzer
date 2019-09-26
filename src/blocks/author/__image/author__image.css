@@ -1,0 +1,19 @@
+.author__image {
+    width: 272px;
+    height: 272px;
+}
+
+@media screen and (min-width: 768px) {
+    .author__image {
+        width: 232px;
+        height: 232px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .author__image {
+        width: 464px;
+        height: 464px;
+    }
+}
+

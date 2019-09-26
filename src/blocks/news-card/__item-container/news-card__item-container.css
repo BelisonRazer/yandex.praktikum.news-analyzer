@@ -1,0 +1,28 @@
+.news-card__item-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 288px);
+    grid-gap: 13px 8px;
+    justify-content: center;
+
+
+    margin: 0 16px 13px 16px;
+}
+
+@media screen and (min-width: 768px) {
+    .news-card__item-container {
+        margin: 0 40px 24px 40px;
+
+        grid-template-columns: repeat(3, 224px);
+        grid-gap: 8px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .news-card__item-container {
+        margin: 0 104px 64px 104px;
+
+        grid-template-columns: repeat(auto-fit, 400px);
+        grid-gap: 16px;
+    }
+}
+

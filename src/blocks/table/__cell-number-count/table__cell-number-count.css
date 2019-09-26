@@ -1,0 +1,12 @@
+.table__cell-number-count {
+    margin: 0 0 0 6px;
+
+    font-family: Roboto-light, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.4px;
+
+    color: #ffffff;
+}

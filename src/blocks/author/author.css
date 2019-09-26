@@ -1,0 +1,27 @@
+@import url(./__image-box/author__image-box.css);
+@import url(./__content/author__content.css);
+@import url(./__image/author__image.css);
+
+.author {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    min-width: 320px;
+
+    padding: 32px 0;
+}
+
+@media screen and (min-width: 768px) {
+    .author{
+        flex-direction: row;
+
+        padding: 40px 0;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .author{
+        padding: 80px 0;
+    }
+}

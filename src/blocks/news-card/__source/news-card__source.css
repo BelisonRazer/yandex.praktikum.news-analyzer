@@ -1,0 +1,19 @@
+.news-card__source {
+    font-family: Robotoslab-regular;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+
+    color: #B6BCBF;
+
+    margin: 12px 16px 0 16px;
+}
+
+@media screen and (min-width: 1440px) {
+    .news-card__source {
+        margin: 18px 24px 0 24px;
+    }   
+}

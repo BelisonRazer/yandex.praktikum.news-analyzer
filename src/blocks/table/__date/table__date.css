@@ -1,0 +1,15 @@
+.table__date {
+    margin: 0;
+
+    font-family: Roboto-light, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+
+    color: #B6BCBF;
+
+    grid-column: 1;
+}

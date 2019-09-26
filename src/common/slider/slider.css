@@ -1,0 +1,13 @@
+@import url(./__frame/slider__frame.css);
+@import url(./__card/slider__card.css);
+@import url(./__date/slider__date.css);
+@import url(./__email/slider__email.css);
+@import url(./__image/slider__image.css);
+@import url(./__name/slider__name.css);
+@import url(./__text/slider__text.css);
+@import url(./__user/silder__user.css);
+@import url(./__info-box/slider__info-box.css);
+
+.slider {
+
+}

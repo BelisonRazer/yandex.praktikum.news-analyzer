@@ -1,0 +1,21 @@
+.news-card__item {
+    background-color: #fff;
+
+    border-radius: 20px;
+    overflow: hidden;
+
+    padding-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) {
+    .news-card__item {
+        margin-bottom: 16px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .news-card__item {
+        padding-bottom: 24px;
+        margin-bottom: 0px;
+    }
+}
