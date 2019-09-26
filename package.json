@@ -4,8 +4,8 @@
   "description": "Сервис анализа новостей",
   "main": "webpack.config.js",
   "scripts": {
-    "build": "NODE_ENV=production rimraf dist && webpack --mode production --progress",
-    "dev": "NODE_ENV=development webpack-dev-server --mode development --open --watch",
+    "build": "rimraf dist && webpack --mode production --progress",
+    "dev": "webpack-dev-server --mode development --open --watch",
     "deploy": "gh-pages -d dist"
   },
   "repository": {
