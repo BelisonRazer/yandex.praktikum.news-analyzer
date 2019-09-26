@@ -1,9 +1,9 @@
-.header__input-container {
+.search__input-container {
     margin-bottom: 16px;
 }
 
 @media screen and (min-width: 768px) {
-    .header__input-container {
+    .search__input-container {
         margin-bottom: 0;
         
         grid-column: 1;

@@ -1,4 +1,4 @@
-.header__label {
+.search__label {
     margin: 0;
 
     font-family: Robotoslab-regular;
@@ -11,7 +11,7 @@
 }
 
 @media screen and (min-width: 1440px) {
-    .header__label {
+    .search__label {
         font-size: 60px;
         line-height: 64px;  
     }

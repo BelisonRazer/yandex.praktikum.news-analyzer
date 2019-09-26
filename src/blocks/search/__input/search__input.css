@@ -1,4 +1,4 @@
-.header__input {
+.search__input {
     width: 100%;
     height: 56px;
 
@@ -19,14 +19,14 @@
     z-index: 90;
 }
 
-.header__input::-webkit-input-placeholder {
+.search__input::-webkit-input-placeholder {
     color: rgba(182, 188, 191, 0.8);
 }
 
-.header-input::-moz-placeholder {
+.search-input::-moz-placeholder {
     color: rgba(182, 188, 191, 0.8);
 }
 
-.header__input:active, .header__input:focus {
+.search__input:active, .search__input:focus {
     outline: none;
 }

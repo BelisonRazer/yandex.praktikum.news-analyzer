@@ -1,9 +1,9 @@
-.header__search-field {
+.search__search-field {
     margin: 0 16px 0 16px;
 }
 
 @media screen and (min-width: 768px) {
-    .header__search-field {
+    .search__search-field {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
