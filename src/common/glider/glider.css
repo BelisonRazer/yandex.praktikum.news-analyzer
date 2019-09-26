@@ -39,13 +39,44 @@
     background-repeat: no-repeat;
     background-position: 45% center;
 
-    
+    z-index: 1001;
 }
 
 .glide__arrows > .glide__arrow--right {
     background-image: url(../../images/glider-arrow-right.svg);
     background-repeat: no-repeat;
     background-position: center;
+
+    z-index: 1002;
+}
+
+.glide__arrows > .glide__arrow:hover {
+    box-shadow: inset 0 0 0 5px #5f5f5f;
+}
+
+.glide__track:before {
+    position: absolute;
+    bottom: 6%;
+
+    padding: 121px 44px;
+
+    box-shadow: inset 55px 0px 30px 0px #fff;
+    border-radius: 16px;
+
+    z-index: 1000;
+}
+
+.glide__track:after {
+    position: absolute;
+    bottom: 6%;
+    right: 0;
+
+    padding: 121px 44px;
+
+    box-shadow: inset -55px 0px 30px 0px #fff;
+    border-radius: 16px;
+
+    z-index: 999;
 }
 
 @media screen and (min-width: 768px) {
@@ -67,6 +98,14 @@
 
     .glide > .glide__arrows {
         display: block;
+    }
+
+    .glide__track:before {
+        content: "";
+    }
+
+    .glide__track:after {
+        content: "";
     }
 }
 
