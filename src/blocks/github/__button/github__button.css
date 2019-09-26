@@ -8,21 +8,23 @@
     border-radius: 80px;  
 }
 
-.github__button > a:hover {
-    text-decoration: underline;
-
-    color: #444444;
+.github__form > .github__button:hover {
+    color: gray;
+    border: 2px solid gray;
 }
 
 @media screen and (min-width: 768px) {
     .github__button {
         border: 0;
 
+        height: auto;
         width: 180px;
     }
 
-    .github__button {
-        height: auto;
+    .github__button:hover {
+        text-decoration: underline;
+    
+        color: #444444;
     }
 
     .github__button::after {

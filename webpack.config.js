@@ -96,9 +96,6 @@ module.exports = (env, options) => {
                     test: /\.js$/,
                     use: {
                         loader: "babel-loader",
-                        // options: {
-                        //     presets: ['babel-preset-env']
-                        // },
                     },
                     exclude: /node_modules/
                 },
@@ -139,3 +136,6 @@ module.exports = (env, options) => {
         // plugins: mode !== 'production' ? basicPlugins : basicPlugins.concat(prodPlugins)
     }
 };
+
+// "build": "NODE_ENV=production rimraf dist && webpack --mode production --progress",
+// "dev": "NODE_ENV=development webpack-dev-server --mode development --open --watch",

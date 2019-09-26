@@ -5,20 +5,19 @@
 @import url(./common/active/active.css);
 @import url(./common/button/button.css);
 @import url(./common/circle-preloader/circle-preloader.css);
-@import url(./common/heading/heading.css);
 @import url(./common/glider/glider.css);
 @import url(./common/slider/slider.css);
 
 @import url(./blocks/header/header.css);
+@import url(./blocks/heading/heading.css);
+@import url(./blocks/search/search.css);
 @import url(./blocks/author/author.css);
 @import url(./blocks/footer/footer.css);
 @import url(./blocks/root/root.css);
 @import url(./blocks/news-card/news-card.css);
-/* @import url(./blocks/about/about.css); */
 @import url(./blocks/to-customers/to-customers.css);
 @import url(./blocks/tech/tech.css);
 @import url(./blocks/github/github.css);
-/* @import url(./blocks/analytics/analytics.css); */
 @import url(./blocks/answer/answer.css);
 @import url(./blocks/table/table.css);
 
@@ -48,57 +47,3 @@ a:active, a:hover, a {
     text-decoration:none;
     color: #1A1B22;
 }
-
-/* .glide {
-    margin-bottom: 40px;
-}
-
-.glide__slides {
-    margin: 0;
-    padding: 0 16px;
-}
-
-.glide__bullets {
-    bottom: -21px;
-}
-
-.slider__bullet {
-    background-color: #D1D2D6;
-}
-
-.glide__bullet--active {
-    background-color: #1A1B22;
-}
-
-
-.glide__arrows {
-    display: none;
-}
-
-@media screen and (min-width: 768px) {
-    .glide__slides  {
-        padding: 0 40px;
-    }
-
-    .glide__bullets {
-        bottom: -32px;
-    }
-
-    .glide {
-        margin-bottom: 64px;
-    }
-}
-
-@media screen and (min-width: 1440px) {
-    .glide__slides  {
-        padding: 0 104px;
-    }
-
-    .glide__bullets {
-        bottom: -48px;
-    }
-
-    .glide {
-        margin-bottom: 0;
-    }
-} */

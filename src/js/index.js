@@ -1,6 +1,4 @@
-// import "../style.css";
-
-const button = document.querySelector('.header__button');
+const button = document.querySelector('.search__button');
 const search = document.querySelector('.news-card__search');
 const notFound = document.querySelector('.news-card__not-found');
 

@@ -1,17 +1,17 @@
-.header__label-container {
+.search__label-container {
     width: 70%;
 
     margin: 0 0 56px 16px;
 }
 
 @media screen and (min-width: 768px) {
-    .header__label-container {
+    .search__label-container {
         margin: 0 0 16px 0;
     }
 }
 
 @media screen and (min-width: 1440px) {
-    .header__label-container {
+    .search__label-container {
         margin: 0 0 32px 0;
 
         max-width: 350px;
