@@ -1,3 +1,7 @@
+import RenderLoading from './common';
+
+const render = RenderLoading();
+
 export default class Api {
     constructor(options) {
         this.options = options;
@@ -10,10 +14,12 @@ export default class Api {
             `to=${dateTo}&` +
             'sortBy=popularity&' +
             'language=ru&' +
+            'pageSize=100&'+
             `apiKey=${this.options.apiKey}`
         )
 
         if (res.ok) {
+            render.search();
             const json = await res.json();
             return json;
         } else {

@@ -19,6 +19,7 @@
 @import url(./__source/news-card__source.css);
 @import url(./__text/news-card__text.css);
 @import url(./__correct/news-card__correct.css);
+@import url(./__box-content/news-card__box-content.css);
 
 .news-card {
     background-color: #F5F6F7;

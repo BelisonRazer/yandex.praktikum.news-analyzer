@@ -1,4 +1,8 @@
+import RenderLoading from '../../js/common';
+
 const itemList = document.querySelector('.news-card__item-container');
+const showMoreB = document.querySelector('.news-card__button-show-more');
+const render = RenderLoading();
 
 export default class Card {
     constructor(eImageURL, eDate, eLabel, eText, eSource) {
@@ -9,6 +13,7 @@ export default class Card {
         if ('content' in document.createElement('template')) {
             const templ = document.querySelector('.template');
             const cardItem = templ.content.querySelector('.news-card__item');
+            const cardBox = templ.content.querySelector('.news-card__box-content');
             const cardImage = templ.content.querySelector('.news-card__image');
             const cardDate = templ.content.querySelector('.news-card__date');
             const cardLabel = templ.content.querySelector('.news-card__label');
@@ -30,6 +35,7 @@ export default class Card {
 
             const container = document.createDocumentFragment();
             const cardItem = document.createElement('div');
+            const cardBox = document.createElement('div');
             const cardImage = document.createElement('div');
             const cardDate = document.createElement('p');
             const cardLabel = document.createElement('h3');
@@ -40,11 +46,12 @@ export default class Card {
 
             cardCorrectInner.appendChild(cardText);
             cardCorrect.appendChild(cardCorrectInner);
-            cardItem.appendChild(cardImage);
-            cardItem.appendChild(cardDate);
-            cardItem.appendChild(cardLabel);
-            cardItem.appendChild(cardCorrect);
+            cardBox.appendChild(cardImage);
+            cardBox.appendChild(cardDate);
+            cardBox.appendChild(cardLabel);
+            cardBox.appendChild(cardCorrect);
             cardItem.appendChild(cardSource);
+            cardItem.appendChild(cardBox);
             container.appendChild(cardItem);
 
             cardImage.style.backgroundImage = `url(${imageURL})`;
@@ -54,6 +61,7 @@ export default class Card {
             cardSource.textContent = source;
             
             cardItem.classList.add('.news-card__item');
+            cardBox.classList.add('.news-card__box-content');
             cardImage.classList.add('.news-card__image');
             cardDate.classList.add('.news-card__date');
             cardLabel.classList.add('.news-card__label');
@@ -80,7 +88,7 @@ export class CardList {
     }
 
     render() {
-        if (itemList.getElementsByClassName('news-card__item').length === 0) {
+        // if (itemList.getElementsByClassName('news-card__item').length === 0) {
             for (let i = 0; i < this.serverCard.length; i++) {
 
                 const monthList = {
@@ -104,8 +112,39 @@ export class CardList {
                 const dt = dayConvert.getDate();
                 const resultDate = `${dt} ${monthList[month]}, ${year}`;
 
-                this.addCard(this.serverCard[i].urlToImage, resultDate, this.serverCard[i].title, this.serverCard[i].description, this.serverCard[i].source.name); 
+                this.addCard(this.serverCard[i].urlToImage, resultDate, this.serverCard[i].title, this.serverCard[i].description, this.serverCard[i].source.name);
             }
-        } 
+
+            this.showRenderCard();
+    }
+
+    showRenderCard() {
+        showMoreB.addEventListener('click', this.showMore);
+        const card = document.querySelectorAll('.news-card__item');
+
+        for (let i = 0; i <= 2; i++) {
+            card[i].classList.add('on');
+        }
+    }
+
+    showMore(e) {
+        e.preventDefault();
+
+        const on = document.querySelectorAll('.on');
+        let next = on[on.length - 1].nextElementSibling;
+        let index = 0;
+        const step = 3;
+
+        while (index < step) {
+            if (next) {
+                next.classList.add('on');
+                next = next.nextElementSibling;
+                index++;
+            } else {
+                showMoreB.style.display = "none";
+                break;
+            }
+        }
     }
 }
+

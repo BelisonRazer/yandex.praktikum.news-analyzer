@@ -30,7 +30,7 @@
                 <p class="search__text">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.</p>
                 <form class="search__search-field" name="searchForm">
                     <div class="search__input-container">
-                        <input id="word" type="text" name="inputSearch" class="search__input" placeholder="Политика">
+                        <input id="word" type="text" name="inputSearch" class="search__input" placeholder="Политика" minlength="2" maxlength="30" required>
                         <span id="error-word" class="error error_word" aria-live="polite"></span>
                     </div>
                     <button id="submit" name="search" type="submit" class="button search__button">Искать</button>
@@ -60,18 +60,20 @@
 
                         <template class="template">
                             <div class="news-card__item">
-                                <div class="news-card__image"></div>
-                                <p class="news-card__date"></p>
-                                <h3 class="news-card__label"></h3>
-                                <div class="news-card__correct">
-                                    <div class="news-card__correct-inner">
-                                        <p class="news-card__text"></p>
+                                <div class="news-card__box-content">
+                                    <div class="news-card__image"></div>
+                                    <p class="news-card__date"></p>
+                                    <h3 class="news-card__label"></h3>
+                                    <div class="news-card__correct">
+                                        <div class="news-card__correct-inner">
+                                            <p class="news-card__text"></p>
+                                        </div>
                                     </div>
                                 </div>
                                 <p class="news-card__source"></p>
                             </div>  
                         </template>
-                        
+
                     </div>
                     <form class="news-card__form" name="formShowMore">
                         <button class="news-card__button-show-more button" name="show" type="submit">Показать еще</button>

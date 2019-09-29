@@ -1,9 +1,13 @@
 import ButtonState from './__button/search__button';
 import sendForm from '../../js/validateForm';
 import Api from '../../js/api';
+import RenderLoading from '../../js/common';
 import {CardList} from '../news-card/news-card';
+import {showMoreBtn} from '../../js/common';
 
+const render = RenderLoading();
 const buttonState = ButtonState();
+
 const form = document.forms.searchForm;
 const inputSearch = form.elements.inputSearch;
 const searchButton = document.querySelector('.search__button');
@@ -20,21 +24,50 @@ const dateTo = new Date();
 dateFrom.setDate(dateFrom.getDate() - 7).toLocaleString();
 
 class Search {
-    handleSearchClick(e) {
+
+    async handleSearchClick(e) {
+        
         e.preventDefault();
         sendForm();
         
-        api.searchNews(inputSearch.value, dateFrom.toISOString(), dateTo.toISOString()).then((list) => {
-            const myList = list.articles;
-            const cardList = new CardList(itemList, myList);
+        await api.searchNews(inputSearch.value, dateFrom.toISOString(), dateTo.toISOString()).then((list) => {
+        
+            this.saveLocalStorageData(list.articles);
+            const LSData = JSON.parse(localStorage.getItem('data'));
+            const cardList = new CardList(itemList, LSData);
+            console.log(LSData.length);
+            
+            if(LSData.length === 0) {
+                render.notFound();
+                showMoreBtn(false);
+            } else if (LSData.length > 3) {
+                showMoreBtn(true);
+                render.viewCard();
+                cardList.addCard(LSData.urlToImage, LSData.publishedAt, LSData.title, LSData.description, LSData.source.name);
+            } else {
+                showMoreBtn(false);
+                render.viewCard();
+                cardList.addCard(LSData.urlToImage, LSData.publishedAt, LSData.title, LSData.description, LSData.source.name);
+            }
 
-            cardList.addCard(myList.urlToImage, myList.publishedAt, myList.title, myList.description, myList.source.name);
         }).catch((err) => {
             console.log(err);
         });
         
         // form.reset();
         inputSearch.classList.add('err');
+    }
+
+    saveLocalStorageData(data) {
+        localStorage.setItem('data', JSON.stringify(data));
+    }
+
+    clear() {
+        localStorage.clear();
+
+        while(itemList.firstChild) {
+            itemList.removeChild(itemList.firstChild);
+        }
     }
 }
 
