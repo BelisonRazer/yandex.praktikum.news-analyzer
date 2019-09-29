@@ -2,6 +2,10 @@
     margin-bottom: 16px;
 }
 
+.search__input-container-invalid > .err {
+    margin-bottom: 16px;
+}
+
 @media screen and (min-width: 768px) {
     .search__input-container {
         margin-bottom: 0;

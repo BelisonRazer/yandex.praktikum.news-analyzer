@@ -30,3 +30,7 @@
 .search__input:active, .search__input:focus {
     outline: none;
 }
+
+.search__input-container-invalid > .search__input {
+    border: 1px solid #ff0000;
+}

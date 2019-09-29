@@ -1,3 +1,7 @@
 .error {
-    
+    color: #ff0000;
+}
+
+.err + .error {
+    margin-left: 16px;
 }

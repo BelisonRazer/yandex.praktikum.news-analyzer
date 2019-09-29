@@ -7,6 +7,7 @@
 @import url(./common/circle-preloader/circle-preloader.css);
 @import url(./common/glider/glider.css);
 @import url(./common/slider/slider.css);
+@import url(./common/error/error.css);
 
 @import url(./blocks/header/header.css);
 @import url(./blocks/heading/heading.css);

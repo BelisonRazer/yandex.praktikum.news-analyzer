@@ -1,21 +1,26 @@
-const button = document.querySelector('.search__button');
-const search = document.querySelector('.news-card__search');
-const notFound = document.querySelector('.news-card__not-found');
+import './api';
+import './validateForm';
+import '../blocks/search/search';
+import '../blocks/news-card/news-card';
 
-function notFounds() {
-    search.style.display = 'none';
-    notFound.style.display = 'flex';
-}
+// const button = document.querySelector('.search__button');
+// const search = document.querySelector('.news-card__search');
+// const notFound = document.querySelector('.news-card__not-found');
 
-function searching() {
-    search.style.display = 'block';
-    setTimeout(notFounds, 5000);
-}
+// function notFounds() {
+//     search.style.display = 'none';
+//     notFound.style.display = 'flex';
+// }
 
-function showStatus(e) {
-    e.preventDefault();
-    searching();
-}
+// function searching() {
+//     search.style.display = 'block';
+//     setTimeout(notFounds, 5000);
+// }
 
-button.addEventListener('click', showStatus);
+// function showStatus(e) {
+//     e.preventDefault();
+//     searching();
+// }
+
+// button.addEventListener('click', showStatus);
 
