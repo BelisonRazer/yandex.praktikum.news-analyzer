@@ -1,4 +1,5 @@
 import RenderLoading from '../../js/common';
+import monthList from '../../js/common';
 
 const itemList = document.querySelector('.news-card__item-container');
 const showMoreB = document.querySelector('.news-card__button-show-more');
@@ -88,34 +89,18 @@ export class CardList {
     }
 
     render() {
-        // if (itemList.getElementsByClassName('news-card__item').length === 0) {
-            for (let i = 0; i < this.serverCard.length; i++) {
+        for (let i = 0; i < this.serverCard.length; i++) {
 
-                const monthList = {
-                    0: 'января',
-                    1: 'февраля',
-                    2: 'марта',
-                    3: 'апреля',
-                    4: 'мая',
-                    5: 'июня',
-                    6: 'июля',
-                    7: 'августа',
-                    8: 'сентября',
-                    9: 'октября',
-                    10: 'ноября',
-                    11: 'декабря'
-                }
+            const dayConvert = new Date(this.serverCard[i].publishedAt);
+            const year = dayConvert.getFullYear();
+            const month = dayConvert.getMonth();
+            const dt = dayConvert.getDate();
+            const resultDate = `${dt} ${monthList[month]}, ${year}`;
 
-                const dayConvert = new Date(this.serverCard[i].publishedAt);
-                const year = dayConvert.getFullYear();
-                const month = dayConvert.getMonth();
-                const dt = dayConvert.getDate();
-                const resultDate = `${dt} ${monthList[month]}, ${year}`;
+            this.addCard(this.serverCard[i].urlToImage, resultDate, this.serverCard[i].title, this.serverCard[i].description, this.serverCard[i].source.name);
+        }
 
-                this.addCard(this.serverCard[i].urlToImage, resultDate, this.serverCard[i].title, this.serverCard[i].description, this.serverCard[i].source.name);
-            }
-
-            this.showRenderCard();
+        this.showRenderCard();
     }
 
     showRenderCard() {

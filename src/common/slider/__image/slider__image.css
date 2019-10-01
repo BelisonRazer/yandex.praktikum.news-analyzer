@@ -1,5 +1,8 @@
 .slider__image {
-    background: url("../../../images/vasilyy.png") center center no-repeat;
+    /* background: url("../../../images/vasilyy.png") center center no-repeat; */
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
     width: 48px;
 
     margin-right: 12px;

@@ -24,37 +24,33 @@ const dateTo = new Date();
 dateFrom.setDate(dateFrom.getDate() - 7).toLocaleString();
 
 class Search {
-
     async handleSearchClick(e) {
-        
+        this.clear();
         e.preventDefault();
         sendForm();
-        
+
         await api.searchNews(inputSearch.value, dateFrom.toISOString(), dateTo.toISOString()).then((list) => {
         
             this.saveLocalStorageData(list.articles);
             const LSData = JSON.parse(localStorage.getItem('data'));
-            const cardList = new CardList(itemList, LSData);
-            console.log(LSData.length);
-            
+
             if(LSData.length === 0) {
                 render.notFound();
                 showMoreBtn(false);
             } else if (LSData.length > 3) {
+                new CardList(itemList, LSData);
                 showMoreBtn(true);
                 render.viewCard();
-                cardList.addCard(LSData.urlToImage, LSData.publishedAt, LSData.title, LSData.description, LSData.source.name);
             } else {
+                new CardList(itemList, LSData);
                 showMoreBtn(false);
                 render.viewCard();
-                cardList.addCard(LSData.urlToImage, LSData.publishedAt, LSData.title, LSData.description, LSData.source.name);
             }
 
         }).catch((err) => {
             console.log(err);
         });
         
-        // form.reset();
         inputSearch.classList.add('err');
     }
 
