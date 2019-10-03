@@ -1,5 +1,7 @@
 import "../style.css";
 
+export const weekAgo = 6 * 24 * 60 * 60 * 1000;
+export const weekDay = ['ВС', 'ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ'];
 export const monthList = {
     0: 'января',
     1: 'февраля',
@@ -13,7 +15,7 @@ export const monthList = {
     9: 'октября',
     10: 'ноября',
     11: 'декабря'
-}
+};
 
 export default function RenderLoading() {
 
@@ -22,21 +24,21 @@ export default function RenderLoading() {
     const newsCardList = document.querySelector('.news-card__list');
 
     function search() {
-        searchPreloader.style.display = 'block';
         searchNotFound.style.display = 'none';
         newsCardList.style.display = 'none';
+        searchPreloader.style.display = 'block';
     }
 
     function notFound() {
         searchPreloader.style.display = 'none';
-        searchNotFound.style.display = 'flex';
         newsCardList.style.display = 'none';
+        searchNotFound.style.display = 'flex';
     }
 
     function viewCard() {
-        newsCardList.style.display = 'flex';
         searchNotFound.style.display = 'none';
         searchPreloader.style.display = 'none';
+        newsCardList.style.display = 'flex';
     }
 
     return {

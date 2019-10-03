@@ -143,7 +143,6 @@ export class CardCommitList {
             const month = dayConvert.getMonth();
             const dt = dayConvert.getDate();
             const resultDate = `${dt} ${monthList[month]}, ${year}`;
-            console.log(month);
 
             this.addCard(this.serverCard[i].commit.committer.name, this.serverCard[i].commit.committer.email, resultDate, this.serverCard[i].commit.message, this.serverCard[i].author.avatar_url);
         }

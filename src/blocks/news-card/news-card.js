@@ -1,5 +1,5 @@
 import RenderLoading from '../../js/common';
-import monthList from '../../js/common';
+import {monthList} from '../../js/common';
 
 const itemList = document.querySelector('.news-card__item-container');
 const showMoreB = document.querySelector('.news-card__button-show-more');
@@ -89,15 +89,15 @@ export class CardList {
     }
 
     render() {
-        for (let i = 0; i < this.serverCard.length; i++) {
+        for (let i = 0; i < this.serverCard.articles.length; i++) {
 
-            const dayConvert = new Date(this.serverCard[i].publishedAt);
+            const dayConvert = new Date(this.serverCard.articles[i].publishedAt);
             const year = dayConvert.getFullYear();
             const month = dayConvert.getMonth();
             const dt = dayConvert.getDate();
             const resultDate = `${dt} ${monthList[month]}, ${year}`;
 
-            this.addCard(this.serverCard[i].urlToImage, resultDate, this.serverCard[i].title, this.serverCard[i].description, this.serverCard[i].source.name);
+            this.addCard(this.serverCard.articles[i].urlToImage, resultDate, this.serverCard.articles[i].title, this.serverCard.articles[i].description, this.serverCard.articles[i].source.name);
         }
 
         this.showRenderCard();
@@ -107,8 +107,11 @@ export class CardList {
         showMoreB.addEventListener('click', this.showMore);
         const card = document.querySelectorAll('.news-card__item');
 
+        // если меньше 3 - проверка для избежания ошибки на 3 итерацию цикла.
         for (let i = 0; i <= 2; i++) {
-            card[i].classList.add('on');
+            if (card[i]) {
+                card[i].classList.add('on');
+            }
         }
     }
 
