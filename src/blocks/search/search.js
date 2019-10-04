@@ -68,8 +68,33 @@ class Search {
             itemList.removeChild(itemList.firstChild);
         }
     }
-}
+};
 
 const search = new Search();
+
+window.onload = function() {
+    if(localStorage.getItem('word') !== null && localStorage.getItem('data') !== null) {
+        const word = JSON.parse(localStorage.getItem('word'));
+        const LSData = JSON.parse(localStorage.getItem('data'));
+
+        inputSearch.value = word;
+
+        if(LSData.articles.length === 0) {
+            render.notFound();
+            showMoreBtn(false);
+        } else if (LSData.articles.length > 3) {
+            new CardList(itemList, LSData);
+            showMoreBtn(true);
+            render.viewCard();
+        } else {
+            new CardList(itemList, LSData);
+            showMoreBtn(false);
+            render.viewCard();
+        }
+
+        //При возврате с страницы статистики отображаются прошлые данные, но после очередной перезагрузки страницы данные очищаются
+        localStorage.clear();
+    }
+};
 
 form.addEventListener('submit', (e) => search.handleSearchClick(e));
