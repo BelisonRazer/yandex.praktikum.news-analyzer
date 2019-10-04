@@ -10,6 +10,7 @@ const render = RenderLoading();
 const form = document.forms.searchForm;
 const inputSearch = form.elements.inputSearch;
 const itemList = document.querySelector('.news-card__item-container');
+const newsCardLinkToAnalytics = document.querySelector('.news-card__link-to-analytics');
 
 const api = new Api({
     baseUrl: 'https://newsapi.org/v2/everything?',
@@ -72,12 +73,19 @@ class Search {
 
 const search = new Search();
 
+/**
+ * Доработка алгоритма:
+ * 1. При возврате из статистики на главную - отрисовываются карточки
+ * 2. Очищается LS
+ * 3. При перезагрузке главной страницы - карточек уже не будет.
+ * 4. Если снова была нажата кнопка просмотра статистики(к тем же данным), они снова сохраняются в LS
+ */
 window.onload = function() {
     if(localStorage.getItem('word') !== null && localStorage.getItem('data') !== null) {
         const word = JSON.parse(localStorage.getItem('word'));
         const LSData = JSON.parse(localStorage.getItem('data'));
 
-        inputSearch.value = word;
+        inputSearch.value = word; 
 
         if(LSData.articles.length === 0) {
             render.notFound();
@@ -92,8 +100,22 @@ window.onload = function() {
             render.viewCard();
         }
 
-        //При возврате с страницы статистики отображаются прошлые данные, но после очередной перезагрузки страницы данные очищаются
+        function returnInStatisticAfterLSClear() {
+
+            if(word === inputSearch.value) {
+                localStorage.setItem('data', JSON.stringify(LSData));
+                localStorage.setItem('word', JSON.stringify(word));
+            } else {
+                const wordNew = JSON.parse(localStorage.getItem('word'));
+                const LSDataNew = JSON.parse(localStorage.getItem('data'));
+                
+                localStorage.setItem('data', JSON.stringify(LSDataNew));
+                localStorage.setItem('word', JSON.stringify(wordNew));
+            }
+        }
+
         localStorage.clear();
+        newsCardLinkToAnalytics.addEventListener('click', returnInStatisticAfterLSClear);
     }
 };
 

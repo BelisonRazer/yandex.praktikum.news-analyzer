@@ -100,11 +100,11 @@ export class CardList {
             this.addCard(this.serverCard.articles[i].urlToImage, resultDate, this.serverCard.articles[i].title, this.serverCard.articles[i].description, this.serverCard.articles[i].source.name);
         }
 
-        this.showRenderCard();
+        CardList.showRenderCard();
     }
 
-    showRenderCard() {
-        showMoreB.addEventListener('click', this.showMore);
+    static showRenderCard() {
+        showMoreB.addEventListener('click', CardList.showMore);
         const card = document.querySelectorAll('.news-card__item');
 
         // если меньше 3 - проверка для избежания ошибки на 3 итерацию цикла.
@@ -115,7 +115,7 @@ export class CardList {
         }
     }
 
-    showMore(e) {
+    static showMore(e) {
         e.preventDefault();
 
         const on = document.querySelectorAll('.on');
