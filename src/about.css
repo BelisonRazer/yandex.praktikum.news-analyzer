@@ -5,6 +5,7 @@
 @import url(./common/button/button.css);
 @import url(./common/glider/glider.css);
 @import url(./common/slider/slider.css);
+@import url(./common/active/active.css);
 
 @import url(./blocks/root/root.css);
 @import url(./blocks/header/header.css);
