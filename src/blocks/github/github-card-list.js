@@ -155,13 +155,13 @@ export class CardCommitList {
         const glide = new Glide('.glide', {
             type: 'carousel',
             bound: true,
-            perView: 2,
+            perView: 3,
             focusAt: '2',
             startAt: 0,
             gap: 16,
             peek: {
-                before: 313.500,
-                after: 313.500,
+                before: 113.500,
+                after: 113.500,
             },
             breakpoints: {
                 1439: {
