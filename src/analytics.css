@@ -1,0 +1,26 @@
+@import url(./vendor/fonts.css);
+
+@import url(./common/text/text.css);
+@import url(./common/title/title.css);
+
+@import url(./blocks/root/root.css);
+@import url(./blocks/header/header.css);
+@import url(./blocks/heading/heading.css);
+@import url(./blocks/answer/answer.css);
+@import url(./blocks/table/table.css);
+@import url(./blocks/footer/footer.css);
+
+body {
+    margin: 0;
+}
+
+button, 
+button:active, 
+button:focus {
+    outline: none;
+}
+
+a:active, a:hover, a {
+    text-decoration:none;
+    color: #1A1B22;
+}

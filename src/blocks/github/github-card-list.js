@@ -78,14 +78,16 @@ export default class CardCommit {
 }
 
 export class CardBullets {
-    constructor () {
-        this.cardElement = this.createBullets();
+    constructor (numb) {
+        this.cardElement = this.createBullets(numb);
     }
 
-    createBullets() {
+    createBullets(myNumb) {
         if ('content' in document.createElement('template')) {
             const template = document.querySelector('.template-bullets');
             const bullet = template.content.querySelector('.glide__bullet');
+
+            bullet.setAttribute('data-glide-dir', `=${myNumb}`);
 
             const containerBullets = document.importNode(template.content, true);
             return containerBullets;
@@ -111,14 +113,14 @@ export class CardBulletsList {
         this.render();
     }
 
-    addBullets() {
-        const { cardElement } = new CardBullets();
+    addBullets(numb) {
+        const { cardElement } = new CardBullets(numb);
         this.container.appendChild(cardElement);
     }
 
     render() {
         for (let i = 0; i < this.count.length; i++) {
-            this.addBullets();
+            this.addBullets(i);
         }
     }
 }
@@ -154,7 +156,7 @@ export class CardCommitList {
             type: 'carousel',
             bound: true,
             perView: 2,
-            focusAt: 'center',
+            focusAt: '2',
             startAt: 0,
             gap: 16,
             peek: {
@@ -230,19 +232,7 @@ export class CardCommitList {
                     gap: 8,
                     bound: true,
                     peek: {
-                        before: 16,
-                        after: 16,
-                    },
-                },
-                768: {
-                    type: 'slider',
-                    perView: 2,
-                    startAt: 0,
-                    focusAt: 0,
-                    gap: 8,
-                    bound: true,
-                    peek: {
-                        before: 16,
+                        before: 8,
                         after: 16,
                     },
                 },
@@ -254,7 +244,7 @@ export class CardCommitList {
                     gap: 8,
                     bound: true,
                     peek: {
-                        before: 16,
+                        before: 8,
                         after: 16,
                     },
                 },

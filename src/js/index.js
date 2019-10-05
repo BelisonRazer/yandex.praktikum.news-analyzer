@@ -1,3 +1,5 @@
+import "../index.css";
+
 import './api';
 import './validateForm';
 import '../blocks/search/search';

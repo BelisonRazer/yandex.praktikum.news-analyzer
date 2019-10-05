@@ -1,4 +1,4 @@
-@import url(./vendor/fonts.css);
+/* @import url(./vendor/fonts.css);
 
 @import url(./common/text/text.css);
 @import url(./common/title/title.css);
@@ -23,12 +23,12 @@
 @import url(./blocks/table/table.css);
 
 @import url(../node_modules/@glidejs/glide/dist/css/glide.core.css);
-@import url(../node_modules/@glidejs/glide/dist/css/glide.theme.css);
+@import url(../node_modules/@glidejs/glide/dist/css/glide.theme.css); */
 
 /* @import url(../node_modules/@glidejs/glide/src/assets/sass/glide.core.scss);
 @import url(../node_modules/@glidejs/glide/src/assets/sass/glide.theme.scss); */
 
-@keyframes spin {
+/* @keyframes spin {
 	100% {
 		transform: rotate(360deg);
 	}
@@ -47,4 +47,4 @@ button:focus {
 a:active, a:hover, a {
     text-decoration:none;
     color: #1A1B22;
-}
+} */

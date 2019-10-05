@@ -1,4 +1,4 @@
-import "../style.css";
+// import "../style.css";
 
 export const weekAgo = 6 * 24 * 60 * 60 * 1000;
 export const weekDay = ['ВС', 'ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ'];
