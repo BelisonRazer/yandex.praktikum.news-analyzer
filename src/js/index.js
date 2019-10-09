@@ -1,7 +1,6 @@
 import "../index.css";
 
-import './api';
-import './validateForm';
-import '../blocks/search/search';
-import '../blocks/news-card/news-card';
-
+import "./api";
+import "./validate";
+import "../blocks/search/search";
+import "../blocks/news-card/news-card";
