@@ -1,10 +1,24 @@
-// import Glide from '@glidejs/glide';
+import ApiGithub from '../../js/api-github';
+import {CardCommitList} from '../../blocks/github/github-card-list';
+import {CardBullets} from '../../blocks/github/github-card-list';
+import {CardBulletsList} from '../../blocks/github/github-card-list';
 
-// let glide = new Glide('.glyde', {
-//     type: 'carousel',
-//     startAt: 0,
-//     perView: 3,
-//     gap: 15,
-// });
+const glideList = document.querySelector('.glide__slides');
+const glideBulletList = document.querySelector('.glide__bullets');
+const apiGithub = new ApiGithub({
+    GIT_URL: 'https://api.github.com/repos/BelisonRazer/yandex.praktikum.news-analyzer/commits',
+});
 
-// glide.mount();
+class GliderDate {
+
+    async push() {
+        await apiGithub.getCommit().then((list) => {
+            new CardCommitList(glideList, list);
+            new CardBulletsList(glideBulletList, list);
+        }).catch((err) => {
+            console.log(err);
+        });
+    }
+}
+
+new GliderDate().push();

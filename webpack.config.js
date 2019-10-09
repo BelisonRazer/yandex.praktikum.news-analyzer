@@ -36,7 +36,7 @@ const basicPlugins = [
         chunks: ["analytics", "common"],
     }),
     new MiniCssExtractPlugin({
-        filename: 'style.[contenthash].css'
+        filename: '[name].[contenthash].min.css'
     }),
     new webpack.DefinePlugin({
         'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
@@ -69,7 +69,7 @@ const prodPlugins = [
         chunks: ["analytics", "common"],
     }),
     new MiniCssExtractPlugin({
-        filename: 'style.[contenthash].min.css'
+        filename: '[name].[contenthash].min.css'
     }),
     new webpack.DefinePlugin({
         'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
@@ -82,14 +82,14 @@ module.exports = (env, options) => {
 
     return {
         entry: {
-            index: `${PATHS.src}/js/index`,
-            common: `${PATHS.src}/js/common`,
-            about: `${PATHS.src}/js/about`,
-            analytics: `${PATHS.src}/js/analytics`
+            index: [`${PATHS.src}/js/index`, `${PATHS.src}/index.css`],
+            about: [`${PATHS.src}/js/about`, `${PATHS.src}/about.css`],
+            analytics: [`${PATHS.src}/js/analytics`, `${PATHS.src}/analytics.css`],
+            common: [`${PATHS.src}/js/common`]
         },
         output: {
             path: path.resolve(__dirname, 'dist'),
-            filename: mode !== 'production' ? '[name].[chunkhash].js' : '[name].[chunkhash].min.js'
+            filename: mode !== 'production' ? 'js/[name].[chunkhash].js' : 'js/[name].[chunkhash].min.js'
         },
         module: {
             rules: [{

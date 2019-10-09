@@ -1,5 +1,17 @@
 .search__input-container {
     margin-bottom: 16px;
+
+    position: relative;
+}
+
+.search__input-container-invalid > .err {
+    margin-bottom: 16px;
+}
+
+@media screen and (min-width: 1440px) {
+    .search__input-container-invalid > .err {
+        margin-bottom: 0;
+    }
 }
 
 @media screen and (min-width: 768px) {
@@ -8,5 +20,9 @@
         
         grid-column: 1;
         grid-row: 1;
+    }
+
+    .search__input-container-invalid > .err {
+        margin-bottom: 0;
     }
 }

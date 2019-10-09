@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.common.css %>">
+    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.index.css %>">
     <link rel="shortcut icon" type="image/png" sizes="32x32" href="<%=require('./images/favicon.png')%>">
     <title>NewsAnalyzer</title>
 </head>
@@ -30,7 +30,7 @@
                 <p class="search__text">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.</p>
                 <form class="search__search-field" name="searchForm">
                     <div class="search__input-container">
-                        <input id="word" type="text" name="name" class="search__input err" placeholder="Политика">
+                        <input id="word" type="text" name="inputSearch" class="search__input" placeholder="Политика" minlength="2" maxlength="30" required>
                         <span id="error-word" class="error error_word" aria-live="polite"></span>
                     </div>
                     <button id="submit" name="search" type="submit" class="button search__button">Искать</button>
@@ -56,41 +56,7 @@
                         </div>
                         <a href="./analytics.html" class="news-card__link-to-analytics">Посмотреть аналитику</a>
                     </div>
-                    <div class="news-card__item-container">
-                        <div class="news-card__item">
-                            <div class="news-card__image"></div>
-                            <p class="news-card__date">2 августа, 2019</p>
-                            <h3 class="news-card__label">Национальное достояние – парки</h3>
-                            <div class="news-card__correct">
-                                <div>
-                                    <p class="news-card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков</p>
-                                </div>
-                            </div>
-                            <p class="news-card__source">Лента.ру</p>
-                        </div>
-                        <div class="news-card__item">
-                            <div class="news-card__image"></div>
-                            <p class="news-card__date">2 августа, 2019</p>
-                            <h3 class="news-card__label">Национальное достояние – парки</h3>
-                            <div class="news-card__correct">
-                                <div>
-                                    <p class="news-card__text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного из местных чудес природы.</p>
-                                </div>
-                            </div>
-                            <p class="news-card__source">Лента.ру</p>
-                        </div>
-                        <div class="news-card__item">
-                            <div class="news-card__image"></div>
-                            <p class="news-card__date">2 августа, 2019</p>
-                            <h3 class="news-card__label">Национальное достояние – парки</h3>
-                            <div class="news-card__correct">
-                                <div>
-                                    <p class="news-card__text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где</p>
-                                </div>
-                            </div>
-                            <p class="news-card__source">Лента.ру</p>
-                        </div>
-                    </div>
+                    <div class="news-card__item-container"></div>
                     <form class="news-card__form" name="formShowMore">
                         <button class="news-card__button-show-more button" name="show" type="submit">Показать еще</button>
                     </form>
@@ -137,3 +103,19 @@
 </body>
 
 </html>
+
+<template class="template">
+    <a href="https://newsapi.org" target="_blank" class="news-card__item">
+        <div class="news-card__box-content">
+            <div class="news-card__image"></div>
+            <p class="news-card__date"></p>
+            <h3 class="news-card__label"></h3>
+            <div class="news-card__correct">
+                <div class="news-card__correct-inner">
+                    <p class="news-card__text"></p>
+                </div>
+            </div>
+        </div>
+        <p class="news-card__source"></p>
+    </a>  
+</template>

@@ -1,3 +1,29 @@
 .error {
-    
+    color: #ff0000;
+
+    position: absolute;
+    left: 1px;
+    top: 69px;
+}
+
+.err + .error {
+    margin-left: 16px;
+}
+
+@media screen and (min-width: 768px) {
+    .error {
+        top: 65px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .error {
+        top: 69px;
+    }
+}
+
+@media screen and (min-width: 320px) {
+    .error {
+        top: 62px;
+    }
 }

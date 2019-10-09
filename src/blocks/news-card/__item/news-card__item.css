@@ -1,4 +1,9 @@
 .news-card__item {
+    /* display: flex; */
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+
     background-color: #fff;
 
     border-radius: 20px;
@@ -18,4 +23,8 @@
         padding-bottom: 24px;
         margin-bottom: 0px;
     }
+}
+
+.on {
+    display: flex;
 }

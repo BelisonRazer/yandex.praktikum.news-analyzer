@@ -3,13 +3,22 @@
     font-size: 22px;
     font-weight: normal;
     line-height: 26px;
+    word-break: break-word;
 
+    overflow: hidden;
+
+    max-height: 77px;
+    
     margin: 0 16px 10px 16px;
 }
 
 @media screen and (min-width: 768px) {
     .news-card__label {
+        overflow: hidden;
+
         line-height: 24px;
+
+        max-height: 72px;
     }
 }
 
@@ -19,5 +28,9 @@
         line-height: 30px;
 
         margin: 0 24px 16px 24px;
+
+        overflow: hidden;
+        
+        max-height: 90px;
     }
 }

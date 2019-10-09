@@ -1,0 +1,37 @@
+@import url(./vendor/fonts.css);
+
+@import url(./common/text/text.css);
+@import url(./common/title/title.css);
+@import url(./common/active/active.css);
+@import url(./common/button/button.css);
+@import url(./common/circle-preloader/circle-preloader.css);
+@import url(./common/error/error.css);
+
+@import url(./blocks/root/root.css);
+@import url(./blocks/header/header.css);
+@import url(./blocks/heading/heading.css);
+@import url(./blocks/search/search.css);
+@import url(./blocks/news-card/news-card.css);
+@import url(./blocks/author/author.css);
+@import url(./blocks/footer/footer.css);
+
+@keyframes spin {
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+body {
+    margin: 0;
+}
+
+button, 
+button:active, 
+button:focus {
+    outline: none;
+}
+
+a:active, a:hover, a {
+    text-decoration:none;
+    color: #1A1B22;
+}
