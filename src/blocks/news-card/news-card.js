@@ -4,10 +4,10 @@ const showMoreB = document.querySelector(".news-card__button-show-more");
 
 export default class Card {
   constructor(eImageURL, eDate, eLabel, eText, eSource) {
-    this.cardElement = this.create(eImageURL, eDate, eLabel, eText, eSource);
+    this.cardElement = Card.create(eImageURL, eDate, eLabel, eText, eSource);
   }
 
-  create(imageURL, date, label, text, source) {
+  static create(imageURL, date, label, text, source) {
     if ("content" in document.createElement("template")) {
       const templ = document.querySelector(".template");
       const cardImage = templ.content.querySelector(".news-card__image");

@@ -1,4 +1,5 @@
-import sendForm from "../../js/validate";
+// import sendForm from "../../js/validate";
+import Validate from "../../js/validate";
 import Api from "../../js/api";
 import { CardList } from "../news-card/news-card";
 import RenderLoading, { showMoreBtn, weekAgo } from "../../js/common";
@@ -10,6 +11,8 @@ const itemList = document.querySelector(".news-card__item-container");
 const newsCardLinkToAnalytics = document.querySelector(
   ".news-card__link-to-analytics"
 );
+
+// const validate = new Validate();
 
 const api = new Api({
   baseUrl: "https://newsapi.org/v2/everything?",
@@ -24,7 +27,9 @@ class Search {
   async handleSearchClick(e) {
     this.clear();
     e.preventDefault();
-    sendForm();
+    new Validate();
+    // validate.sendForm();
+    // sendForm();
 
     await api
       .searchNews(

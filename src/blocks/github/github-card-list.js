@@ -3,10 +3,16 @@ import { monthList } from "../../js/common";
 
 export default class CardCommit {
   constructor(cName, cEmail, cDate, cMessage, cImageUrl) {
-    this.cardElement = this.create(cName, cEmail, cDate, cMessage, cImageUrl);
+    this.cardElement = CardCommit.create(
+      cName,
+      cEmail,
+      cDate,
+      cMessage,
+      cImageUrl
+    );
   }
 
-  create(name, email, date, message, imageUrl) {
+  static create(name, email, date, message, imageUrl) {
     if ("content" in document.createElement("template")) {
       const template = document.querySelector(".template");
       const cardDate = template.content.querySelector(".slider__date");
@@ -73,10 +79,10 @@ export default class CardCommit {
 
 export class CardBullets {
   constructor(numb) {
-    this.cardElement = this.createBullets(numb);
+    this.cardElement = CardBullets.createBullets(numb);
   }
 
-  createBullets(myNumb) {
+  static createBullets(myNumb) {
     if ("content" in document.createElement("template")) {
       const template = document.querySelector(".template-bullets");
       const bullet = template.content.querySelector(".glide__bullet");
