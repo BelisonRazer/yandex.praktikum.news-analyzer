@@ -1,25 +1,16 @@
 .news-card__image {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-
-    width: 100%;
-    min-width: 288px;
-    min-height: 196px;
-
-    margin-bottom: 12px;
+  height: 196px;
 }
 
+
 @media screen and (min-width: 768px) {
-    .news-card__image {
-        margin-bottom: 16px;
-        min-height: 150px;
-    }
+  .news-card__image {
+      height: 150px;
+  }
 }
 
 @media screen and (min-width: 1440px) {
-    .news-card__image {
-        margin-bottom: 20px;
-        min-height: 272px;
-    }
+  .news-card__image {
+      height: 272px;
+  }
 }

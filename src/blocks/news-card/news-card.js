@@ -10,13 +10,19 @@ export default class Card {
   static create(imageURL, date, label, text, source) {
     if ("content" in document.createElement("template")) {
       const templ = document.querySelector(".template");
+      // const cardImageBox = templ.content.querySelector(".news-card__image");
       const cardImage = templ.content.querySelector(".news-card__image");
       const cardDate = templ.content.querySelector(".news-card__date");
       const cardLabel = templ.content.querySelector(".news-card__label");
       const cardText = templ.content.querySelector(".news-card__text");
       const cardSource = templ.content.querySelector(".news-card__source");
 
-      cardImage.style.backgroundImage = `url(${imageURL})`;
+      // cardImage.style.backgroundImage = `url(${imageURL})`;
+      cardImage.setAttribute("src", `${imageURL}`);
+      cardImage.setAttribute(
+        "alt",
+        `Изображение от новостного сервиса: ${source}`
+      );
       cardDate.textContent = date;
       cardLabel.textContent = label;
       cardText.textContent = text;
@@ -97,8 +103,11 @@ export class CardList {
         this.serverCard.articles[i].source.name
       );
     }
+    const cardImages = document.querySelector(".news-card__image");
 
-    CardList.showRenderCard();
+    cardImages.onload = function() {
+      CardList.showRenderCard();
+    };
   }
 
   static showRenderCard() {

@@ -1,0 +1,25 @@
+.news-card__image-box {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+    width: 100%;
+    min-width: 288px;
+    min-height: 196px;
+
+    margin-bottom: 12px;
+}
+
+@media screen and (min-width: 768px) {
+    .news-card__image-box {
+        margin-bottom: 16px;
+        min-height: 150px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .news-card__image-box {
+        margin-bottom: 20px;
+        min-height: 272px;
+    }
+}
