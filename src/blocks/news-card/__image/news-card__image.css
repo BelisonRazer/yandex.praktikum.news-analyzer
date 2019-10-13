@@ -1,16 +1,21 @@
 .news-card__image {
   height: 196px;
+  width: 100%;
 }
 
 
 @media screen and (min-width: 768px) {
   .news-card__image {
       height: 150px;
+
+      object-fit: cover;
   }
 }
 
 @media screen and (min-width: 1440px) {
   .news-card__image {
       height: 272px;
+
+      object-fit: fill;
   }
 }

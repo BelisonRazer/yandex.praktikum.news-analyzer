@@ -1,5 +1,3 @@
-// import "../style.css";
-
 export const weekAgo = 6 * 24 * 60 * 60 * 1000;
 export const weekDay = ["ВС", "ПН", "ВТ", "СР", "ЧТ", "ПТ", "СБ"];
 export const monthList = {
@@ -56,3 +54,49 @@ export function showMoreBtn(show) {
     showMoreB.style.display = "none";
   }
 }
+
+// Обрезание текста -> in news-card
+export function correcting(box) {
+  const correctInner = box.querySelector(".news-card__correct-inner");
+  const correctText = box.querySelector(".news-card__text");
+  const text = correctText.innerHTML;
+  const clone = document.createElement("div");
+
+  clone.style.position = "absolute";
+  clone.style.visibility = "hidden";
+  clone.style.width = `${correctInner.clientWidth}px`;
+  clone.innerHTML = text;
+  box.appendChild(clone);
+
+  let l = text.length - 1;
+  // eslint-disable-next-line prettier/prettier
+  for (; l >= 0 && clone.clientHeight > correctInner.clientHeight; --l) {
+    clone.innerHTML = `${text.substring(0, l)}...`;
+  }
+
+  correctText.innerHTML = clone.innerHTML;
+  box.removeChild(clone);
+}
+
+const addEvent = function(object, type, callback) {
+  if (object == null || typeof object === "undefined") return;
+  if (object.addEventListener) {
+    object.addEventListener(type, callback, false);
+  } else if (object.attachEvent) {
+    object.attachEvent(`on${type}`, callback);
+  } else {
+    // eslint-disable-next-line no-param-reassign
+    object[`on${type}`] = callback;
+  }
+};
+
+// Текст обрезается при уменьшении разрешения окна(при увеличении остается темже - до перезагрузки).
+addEvent(window, "resize", function() {
+  const cardView = document.querySelectorAll(".on");
+
+  for (let i = 0; i <= cardView.length; i++) {
+    if (cardView[i]) {
+      correcting(cardView[i]);
+    }
+  }
+});

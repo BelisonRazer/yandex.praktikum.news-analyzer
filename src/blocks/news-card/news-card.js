@@ -1,4 +1,4 @@
-import { monthList } from "../../js/common";
+import { monthList, correcting } from "../../js/common";
 
 const showMoreB = document.querySelector(".news-card__button-show-more");
 
@@ -10,14 +10,12 @@ export default class Card {
   static create(imageURL, date, label, text, source) {
     if ("content" in document.createElement("template")) {
       const templ = document.querySelector(".template");
-      // const cardImageBox = templ.content.querySelector(".news-card__image");
       const cardImage = templ.content.querySelector(".news-card__image");
       const cardDate = templ.content.querySelector(".news-card__date");
       const cardLabel = templ.content.querySelector(".news-card__label");
       const cardText = templ.content.querySelector(".news-card__text");
       const cardSource = templ.content.querySelector(".news-card__source");
 
-      // cardImage.style.backgroundImage = `url(${imageURL})`;
       cardImage.setAttribute("src", `${imageURL}`);
       cardImage.setAttribute(
         "alt",
@@ -104,7 +102,6 @@ export class CardList {
       );
     }
     const cardImages = document.querySelector(".news-card__image");
-
     cardImages.onload = function() {
       CardList.showRenderCard();
     };
@@ -115,9 +112,11 @@ export class CardList {
     const card = document.querySelectorAll(".news-card__item");
 
     // если меньше 3 - проверка для избежания ошибки на 3 итерацию цикла.
+    // обрезание текста
     for (let i = 0; i <= 2; i++) {
       if (card[i]) {
         card[i].classList.add("on");
+        correcting(card[i]);
       }
     }
   }
@@ -133,6 +132,7 @@ export class CardList {
     while (index < step) {
       if (next) {
         next.classList.add("on");
+        correcting(next);
         next = next.nextElementSibling;
         index++;
       } else {
