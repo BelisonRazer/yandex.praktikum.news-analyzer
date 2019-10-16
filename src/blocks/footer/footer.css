@@ -28,6 +28,22 @@
     .footer {
         height: 80px;
 
+        /* left: calc((100vw - 1440px) / 2); */
+        left: 50%;
+        margin-left: -720px;
+    }
+
+    /* @media (-moz-os-version: windows-xp), (-moz-os-version: windows-vista),
+        (-moz-os-version: windows-win7), (-moz-os-version: windows-win8), (-moz-os-version: windows-win10) {
+        .footer {
+            left: calc((100vw - 1440px - 16px) / 2);
+        }
+    } */
+}
+
+/* @media screen and (min-width: 1480px) {
+    .footer {
         left: calc((100vw - 1440px) / 2);
     }
-}
+} */
+
