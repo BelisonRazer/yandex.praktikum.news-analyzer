@@ -1,6 +1,7 @@
 .news-card__item-container {
     display: grid;
-    grid-template-columns: repeat(1, 288px);
+    /* grid-template-columns: repeat(1, minmax(288px, 400px)); */
+    grid-template-columns: repeat(auto-fill, 288px);
     grid-gap: 13px 8px;
     justify-content: center;
 
@@ -12,7 +13,7 @@
     .news-card__item-container {
         margin: 0 40px 24px 40px;
 
-        grid-template-columns: repeat(3, 224px);
+        grid-template-columns: repeat(3, minmax(224px, 400px));
         grid-gap: 8px;
     }
 }

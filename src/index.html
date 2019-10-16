@@ -66,15 +66,21 @@
 
         <section class="author root__section">
             <div class="author__image-box">
-                <img src="<%=require('./images/author.png')%>" alt="Фотография автора" class="author__image">
+                <img src="<%=require('./images/ava.jpeg')%>" alt="Фотография автора" class="author__image">
             </div>
             <div class="author__content">
                 <h2 class="title">Об авторе</h2>
-                <p class="text">Это блок с описаением автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владете.</p>
-                <p class="text">Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам.</p>
-                <p class="text">Если хотите, оставьте свои контакты: email и телефон. Так заказчики смогут с вами связаться.</p>
+                <p class="text">Привет!</p>
+                <p class="text">Меня зовут Сергей. Я обучался ремеслу фронтенд-разработки на курсах Яндекс.Практикум. Cдавал проектные работы по блокам HTML/CSS, адаптивной верстки, vanilla JS, REST API.</p>
+                <p class="text">Научился разбивать проект на модули и собирать в Webpack. Использовал Flex/Grid, семантические теги, template(documentFragment), keyframes, localStorage, date, асинхронные запросы к API.(Git, AJAX, RegExp, Figma etc.)</p>
             </div>
         </section>
+
+        <!-- Это блок с описаением автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владете. -->
+
+        <!-- Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам. -->
+
+        <!-- Если хотите, оставьте свои контакты: email и телефон. Так заказчики смогут с вами связаться. -->
  
         <footer class="footer root__section">
             <div class="footer__container">
@@ -107,7 +113,9 @@
 <template class="template">
     <a href="https://newsapi.org" target="_blank" class="news-card__item">
         <div class="news-card__box-content">
-            <div class="news-card__image"></div>
+            <div class="news-card__image-box">
+                <img class="news-card__image">
+            </div>
             <p class="news-card__date"></p>
             <h3 class="news-card__label"></h3>
             <div class="news-card__correct">

@@ -1,9 +1,6 @@
-.glider {
-    
-}
-
 .glide > .glide__bullets {
-    bottom: -21px;
+    /* bottom: -21px; */
+    display: none;
 }
 
 .glide__bullets > .slider__bullet {
@@ -82,12 +79,13 @@
 @media screen and (min-width: 768px) {
     .glide > .glide__bullets {
         bottom: -25px;
+        display: flex;
     }
 }
 
 @media screen and (max-width: 768px) {
     .glide {
-        margin-bottom: 48px;
+        margin-bottom: 16px;
     }
 }
 

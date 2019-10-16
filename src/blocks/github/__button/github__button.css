@@ -10,6 +10,7 @@
 
 .github__form > .github__button:hover {
     color: gray;
+    
     border: 2px solid gray;
 }
 
